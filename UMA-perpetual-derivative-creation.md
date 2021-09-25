@@ -11,15 +11,15 @@
 
 ## Для каждого perpetual дериватива требуется:
 
-**1)** Perpetual contract и синтетический токен:
+**1)** [Perpetual contract](https://github.com/UMAprotocol/protocol/tree/master/packages/core/contracts/financial-templates/perpetual-multiparty) и синтетический токен:
 -	Они создаются одной транзакцией c помощью PerpetualCreator, так что могут считаться неотделимыми друг от друга.
 -	При создании Perpetual contract в качестве параметров передаются два идентификатора: Price identifier и Funding rate identifier
 
 **2)** Боты – используются для получения котировок извне и обработки ситуаций liquidation и dispute через DVM:
--	Disputer
--	Liquidator
--	Funding rate proposer
--	Funding rate disputer
+-	[Disputer](https://github.com/UMAprotocol/protocol/tree/master/packages/disputer/src)
+-	[Liquidator](https://github.com/UMAprotocol/protocol/tree/master/packages/liquidator/src)
+-	[Funding rate proposer](https://github.com/UMAprotocol/protocol/tree/master/packages/funding-rate-proposer/src)
+-	[Funding rate disputer](https://github.com/UMAprotocol/protocol/tree/master/packages/disputer) - тоже самое что Disputer для Price identifier, но только для funding rate
 *Боты могут использоваться стандартные или быть модифицированы под требования создаваемого дериватива.*
 
 **3)** Price feed с помощью которого боты получают котировки по API
