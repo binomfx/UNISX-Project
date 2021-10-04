@@ -3,14 +3,14 @@
 It is supposed to create synthetic tokens (perpetual), the price of which is tied to the values of various indexes. 
 
 Examples of possible indexes:
-	- **SPAC-5** - An index that includes the shares of the 5 most active SPAC according to [Yahoo.Finance](https://finance.yahoo.com/u/yahoo-finance/watchlists/most-active-spacs)
-	- **SPAC-FinTech** - An index that includes shares of [SPACs aimed at FinTech companies](https://spactrack.net/activespacs/).
+- **SPAC-5** - An index that includes the shares of the 5 most active SPAC according to [Yahoo.Finance](https://finance.yahoo.com/u/yahoo-finance/watchlists/most-active-spacs)
+- **SPAC-FinTech** - An index that includes shares of [SPACs aimed at FinTech companies](https://spactrack.net/activespacs/).
 
 A feature of such indexes is the periodic revision of the basket of stocks included in the index.
 
 It is proposed to use the following scheme:
 
-	![PriceFeed-INDEX ENG](https://user-images.githubusercontent.com/89580052/135914358-336cb066-616d-4488-b5b2-856a5fb79730.jpg)
+![PriceFeed-INDEX ENG](https://user-images.githubusercontent.com/89580052/135914358-336cb066-616d-4488-b5b2-856a5fb79730.jpg)
 
 1)	The formula for calculating the index:
 	
