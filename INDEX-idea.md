@@ -34,7 +34,7 @@
 
 6)	The rules for including stocks in the index basket and calculating the K value are published in UMIP and on the service's website (in the description of the instrument).
 
-7)	The INDEX.json file is stored in IPFS, a link to it is stored in the smart contract.
+7)	The INDEX.json file is stored in [IPFS](https://www.pinata.cloud/), a link to it is stored in the smart contract.
 
 8)	When changing the composition of the index, the link to the new file is changed in the smart contract by voting. So, malicious modification of the index composition is impossible.
 
