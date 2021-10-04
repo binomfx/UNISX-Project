@@ -24,21 +24,23 @@
 5)	The list of stocks and the current value of K are contained in the INDEX.json file:
 
 ```
-[
-	“K”: “1”,	
-	“Share”: “___”,	
-	“Share”: “___”,	
-	“Share”: “___”	
-]
+	[
+		“K”: “1”,	
+		“Share”: “___”,	
+		“Share”: “___”,	
+		“Share”: “___”	
+	]
 ```
 
 6)	The rules for including stocks in the index basket and calculating the K value are published in UMIP and on the service's website (in the description of the instrument).
 
-7)	The INDEX.json file is stored in IPFS, a link to it is stored in the smart contract of the perpetual tool.
+7)	The INDEX.json file is stored in IPFS, a link to it is stored in the smart contract.
 
 8)	When changing the composition of the index, the link to the new file is changed in the smart contract by voting. So, malicious modification of the index composition is impossible.
 
 9)	The implementation of the pricefid provides for the calculation of the index based on the list of shares from the INDEX.json file received by reference from a smart contract.
 
-10)	
+10)	Examples of possible indexes:
+	- **SPAC-5** - An index that includes the shares of the 5 most active SPAC according to [Yahoo.Finance](https://finance.yahoo.com/u/yahoo-finance/watchlists/most-active-spacs)
+	- **SPAC-FinTech** - An index that includes shares of [SPACs aimed at FinTech companies](https://spactrack.net/activespacs/).
 
