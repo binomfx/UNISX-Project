@@ -10,6 +10,7 @@ INDEX=K*(∑_(i=1)^N▒Q_i )/N
 
 N – number of shares;
 Qi – quote of share i;
+
 K – Correction factor, used to smooth the index values when the basket is changed;
 
 3)	The value of K calculated as follows:
@@ -39,15 +40,10 @@ The initial value of K is chosen arbitrarily, for example 1 or 100.
 
 ```
 [
-
-	“K”: “1”,
-	
-	“Share”: “___”,
-	
-	“Share”: “___”,
-	
-	“Share”: “___”
-	
+	“K”: “1”,	
+	“Share”: “___”,	
+	“Share”: “___”,	
+	“Share”: “___”	
 ]
 ```
 
