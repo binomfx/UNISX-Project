@@ -5,12 +5,14 @@
 	![PriceFeed-INDEX ENG](https://user-images.githubusercontent.com/89580052/135914358-336cb066-616d-4488-b5b2-856a5fb79730.jpg)
 
 2)	The formula for calculating the index:
+	
 	![image](https://user-images.githubusercontent.com/89580052/135917756-45d46434-b907-40b6-806f-22424b99a9d1.png)
 	* N – number of shares;
 	* Qi – quote of share i;
 	* K – Correction factor, used to smooth the index values when the basket is changed;
 
 3)	The value of K calculated as follows:
+
 	![image](https://user-images.githubusercontent.com/89580052/135917866-e6c08c48-ed08-4359-8bf4-ef46232d7508.png)
 	* INDEXold – the last index value calculated from the old basket;
 	* INDEXnew – the first index value calculated for the new basket at the same time as INDEXold;
