@@ -7,8 +7,7 @@ Examples of possible indexes:
 - **SPAC-FinTech** - An index that includes shares of [SPACs aimed at FinTech companies](https://spactrack.net/activespacs/).
 
 A feature of such indexes is the periodic revision of the basket of stocks included in the index.
-
-It is proposed to use the following scheme:
+This is associated with some difficulties in price feed implementation. To overcome these difficulties, it is proposed to use the following scheme:
 
 ![PriceFeed-INDEX ENG](https://user-images.githubusercontent.com/89580052/135914358-336cb066-616d-4488-b5b2-856a5fb79730.jpg)
 
