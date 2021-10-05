@@ -6,6 +6,8 @@ Examples of possible indexes:
 - **SPAC-5** - An index that includes the shares of the 5 most active SPAC according to [Yahoo.Finance](https://finance.yahoo.com/u/yahoo-finance/watchlists/most-active-spacs)
 - **SPAC-FinTech** - An index that includes shares of [SPACs aimed at FinTech companies](https://spactrack.net/activespacs/).
 
+The value of these indices is calculated based on data on stock quotes forming the index basket.
+
 A feature of such indexes is the periodic revision of the basket of stocks included in the index.
 This is associated with some difficulties in price feed implementation. To overcome these difficulties, it is proposed to use the following scheme:
 
