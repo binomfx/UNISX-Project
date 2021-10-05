@@ -1,4 +1,4 @@
-# An approach to creating a synthetic UMA token (perpetual), the price of which is tied to the index value
+# An approach to creating a synthetic UMA token (perpetual) that track the index value
 
 It is supposed to create synthetic tokens (perpetual), the price of which is tied to the values of various indexes. 
 
