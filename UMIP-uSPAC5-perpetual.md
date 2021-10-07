@@ -16,10 +16,10 @@ In addition, that token can be used as components associated with classical mark
 
 ## Technical Specification
 - **Identifier name: uSPAC5**
-- Base asset: _____
+- Base asset: Most active   
 - Quote Currency: None. This is an index, but will be used with USDC.
 - Intended Collateral Currency: USDC
-- Market: ___
+- Market: NYSE
 - Source: 
 - https://marketstack.com/, API - Cost to use: Free - End-of-Day Data; Paid – Intraday Data (https://marketstack.com/plan)
 - Result Processing: _______
