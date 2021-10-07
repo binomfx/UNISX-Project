@@ -22,8 +22,8 @@ In addition, that token can be used as components associated with classical mark
 - Market: NYSE
 - Source:
 https://marketstack.com/, API - Cost to use: Free - End-of-Day Data; Paid – Intraday Data (https://marketstack.com/plan)
-- Result Processing: _______
-- Input Processing: ________ 
+- Result Processing: Evaluate index value based on SPAC shares quotes.
+- Input Processing: Get SPAC shares tickers from SPAC5.JSON file.
 - Scaling Decimals: 18 (1e18)
 - Rounding: Round to nearest 6 decimal places (seventh decimal place digit >= 5 rounds up and < 5 rounds down)
 
