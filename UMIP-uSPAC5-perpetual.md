@@ -16,14 +16,12 @@ In addition, that token can be used as components associated with classical mark
 
 ## Technical Specification
 - **Identifier name: uSPAC5**
-- Base asset: Most active SPAC shares, enumerated in SPAC5.JSON file, stored in IPFS.
+- Base asset: Most active SPAC shares, enumerated in SPAC5.JSON file, stored in IPFS. `variant = uSPAC5   ???????`
 - Quote Currency: USD
 - Intended Collateral Currency: USDC
 - Market: NYSE
 - Source:
 https://marketstack.com/, API - Cost to use: Free - End-of-Day Data; Paid – Intraday Data (https://marketstack.com/plan)
-- Result Processing: Evaluate index value based on SPAC shares quotes.
-- Input Processing: Get SPAC shares tickers from SPAC5.JSON file.
 - Scaling Decimals: 18 (1e18)
 - Rounding: Round to nearest 6 decimal places (seventh decimal place digit >= 5 rounds up and < 5 rounds down)
 
@@ -32,7 +30,7 @@ https://marketstack.com/, API - Cost to use: Free - End-of-Day Data; Paid – In
 - Quote currency: None. This is a percentage.
 - Scaling Decimals: 18
 - Rounding: Round to nearest 9 decimal places (10th decimal place digit >= 5 rounds up and < 5 rounds down)
-- Synthetic Name: uVIXUSDC
+- Synthetic Name: uSPAC5
 - Synthetic Address: 0x___________________________________
 - Perpetual Contract Address: 0x_________________________________
 - UNISWAP Pool Address: 0x________________________________
