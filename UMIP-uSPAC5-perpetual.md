@@ -36,7 +36,7 @@ In addition, that token can be used as components associated with classical mark
 - Synthetic Address: 0x___________________________________
 - Perpetual Contract Address: 0x_________________________________
 - UNISWAP Pool Address: 0x________________________________
-- UNISWAP Pair: uVIXUSDC/USDC
+- UNISWAP Pair: uSPAC5/USDC
 
 ## Rationale
 Special Purpose Acquisition Companies (“SPACs”) are companies formed to raise capital in an initial public offering (“IPO”) with the purpose of using the proceeds to acquire one or more unspecified businesses or assets to be identified after the IPO (irrespective of form, a “Business Combination”).<br>
@@ -55,7 +55,7 @@ The SPAC market is growing exponentially:
 |2016|       13|            3,499.2|                269.2|
 
 By their nature, SPAC shares are subject to impulsive growth at the moment of information or even just rumors that a target company for a merger has been found.<br>
-`A good way to capitalize on such momentum growth without having to analyze hundreds of SPEC is to invest in an index that includes stocks of the most active SPAC.`<br>
+`A good way to capitalize on such momentum growth without having to analyze hundreds of SPAC is to invest in an index that includes stocks of the most active SPAC.`<br>
 
 The selection of 5 stocks of the most active SPACs included in the basket of the proposed uSPAC5 index is made according to [yahoo.finance Most Active SPACs](<https://finance.yahoo.com/u/yahoo-finance/watchlists/most-active-spacs>).<br>
 These underlying assets are traded on the NYSE, but reliable sources of quotations are either paid or provide data with a delay. We suggest using the MarketStack API as the main source of quotes, which has both free and paid tariff plans, and also provides historical price data.
