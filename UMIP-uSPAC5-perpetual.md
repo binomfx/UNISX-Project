@@ -16,12 +16,12 @@ In addition, that token can be used as components associated with classical mark
 
 ## Technical Specification
 - **Identifier name: uSPAC5**
-- Base asset: Most active   
-- Quote Currency: None. This is an index, but will be used with USDC.
+- Base asset: Most active SPAC shares, enumerated in SPAC5.JSON file, stored in IPFS.
+- Quote Currency: USD
 - Intended Collateral Currency: USDC
 - Market: NYSE
-- Source: 
-- https://marketstack.com/, API - Cost to use: Free - End-of-Day Data; Paid – Intraday Data (https://marketstack.com/plan)
+- Source:
+https://marketstack.com/, API - Cost to use: Free - End-of-Day Data; Paid – Intraday Data (https://marketstack.com/plan)
 - Result Processing: _______
 - Input Processing: ________ 
 - Scaling Decimals: 18 (1e18)
