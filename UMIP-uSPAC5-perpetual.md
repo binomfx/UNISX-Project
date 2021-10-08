@@ -7,40 +7,38 @@
 |Created|07.10.2021|
 |Discourse Link| |
 
-## Summary
+## SUMMARY
 The DVM should support price requests for uSPAC5 UMA perpetual price identifier and corresponding uSPAC5_FR funding rate identifiers.<br>
 The purpose of these price identifier is to create synthetic token, price of which is linked to the value of index of 5 most active SPACs (Special Purpose Acquisition Companies) shares.<br> That synthetic token can be used for creating speculative strategies at IPO market.
 
-## Motivation
+## MOTIVATION
 A synthetic token that tracks the index of the 5 most active SPACs stocks can be used for speculative purposes and allows the user to earn on price movements in one of the most interesting markets without centralized intermediaries such as exchanges and brokers.<br> 
 In addition, that token can be used as components associated with classical markets by other DeFi and DApp protocols, which makes it possible to scale.
 
-
 ## TECHNICAL SPECIFICATION
 | | |
-|:--------------------|:----------------------------------------------------------|
-|**Identifier name**|**uSPAC5**|
-|Base asset| Most active SPAC shares, enumerated in SPAC5.JSON file, stored in IPFS.|
-|Quote Currency| USD|
+|:---------------------------|:---------------------------------------------------|
+|**Identifier name**         |**uSPAC5**|
+|Base asset                  | Most active SPAC shares, enumerated in SPAC5.JSON file, stored in IPFS.|
+|Quote Currency              | USD|
 |Intended Collateral Currency| USDC|
-|Market| NYSE|
-|Source|https://marketstack.com/, API - Cost to use: Free - End-of-Day Data; Paid – Intraday Data (https://marketstack.com/plan)|
-|Scaling Decimals| 18 (1e18)|
-|Rounding| Round to nearest 6 decimal places (seventh decimal place digit >= 5 rounds up and < 5 rounds down)|
+|Market                      | NYSE|
+|Source                      |https://marketstack.com/, API - Cost to use: Free - End-of-Day Data; Paid – Intraday Data (https://marketstack.com/plan)|
+|Scaling Decimals            | 18 (1e18)|
+|Rounding                    | Round to nearest 6 decimal places (seventh decimal place digit >= 5 rounds up and < 5 rounds down)|
 | | |
-|**Identifier Name**|**uSPAC5_FR**|
-|Base asset| uSPAC5_FR|
-|Quote currency| None. This is a percentage.|
-|Scaling Decimals| 18|
-|Rounding| Round to nearest 9 decimal places (10th decimal place digit >= 5 rounds up and < 5 rounds down)|
-|Synthetic Name| uSPAC5|
-|Synthetic Address| 0x___________________________________|
-|Perpetual Contract Address| 0x_________________________________|
-|UNISWAP Pool Address| 0x________________________________ |
-|UNISWAP Pair| uSPAC5/USDC|
+|**Identifier Name**         |**uSPAC5_FR**|
+|Base asset                  | uSPAC5_FR|
+|Quote currency              | None. This is a percentage.|
+|Scaling Decimals            | 18|
+|Rounding                    | Round to nearest 9 decimal places (10th decimal place digit >= 5 rounds up and < 5 rounds down)|
+|Synthetic Name              | uSPAC5|
+|Synthetic Address           | 0x___________________________________|
+|Perpetual Contract Address  | 0x_________________________________|
+|UNISWAP Pool Address        | 0x________________________________|
+|UNISWAP Pair                | uSPAC5/USDC|
 
-
-## Rationale
+## RATIONALE
 Special Purpose Acquisition Companies (“SPACs”) are companies formed to raise capital in an initial public offering (“IPO”) with the purpose of using the proceeds to acquire one or more unspecified businesses or assets to be identified after the IPO (irrespective of form, a “Business Combination”).<br>
 SPACs have only a limited period during which they may consummate a Business Combination, generally not exceeding 24 months.<br>
 A SPAC generally focuses upon one industry or sector, but may maintain flexibility to engage in transactions in other industries or sectors if necessary or appropriate.<br>
@@ -60,7 +58,8 @@ By their nature, SPAC shares are subject to impulsive growth at the moment of in
 `A good way to capitalize on such momentum growth without having to analyze hundreds of SPAC is to invest in an index that includes stocks of the most active SPAC.`<br>
 
 The selection of 5 stocks of the most active SPACs included in the basket of the proposed uSPAC5 index is made according to [yahoo.finance Most Active SPACs](<https://finance.yahoo.com/u/yahoo-finance/watchlists/most-active-spacs>).<br>
-These underlying assets are traded on the NYSE, but reliable sources of quotations are either paid or provide data with a delay. We suggest using the MarketStack API as the main source of quotes, which has both free and paid tariff plans, and also provides historical price data.
+These underlying assets are traded on the NYSE, but reliable sources of quotations are either paid or provide data with a delay.<br> 
+We suggest using the [MarketStack](https://marketstack.com/) API as the main source of quotes, which has both free and paid tariff plans, and also provides historical price data.
 
 >Back in early 2018, MarketStack was initially presented under a different name with the aim of providing a free and cost-effective market data alternative to Yahoo Finance. In the course of the years, MarketStack REST API has become one of the most popular one-stop shop solutions for real-time, intraday and historical stock data, supporting a total of 170,000+ stock tickers from 70 global stock exchanges, including NASDAQ, Australian Stock Exchange, London Stock Exchange, and many more.
 
@@ -70,16 +69,19 @@ Underlying stocks are trade during exchange hours which leaves gaps in prices be
 
 A 2-hour TWAP was chosen to mitigate any risk of attempted price manipulation attempts on the market price of the synthetic. To meaningfully manipulate the price that token sponsors’ collateralization is calculated with, an attacker would have to manipulate the trading price of a token for an extended amount of time. This is described further in the Security Considerations section.
 
-## Implementation
-### PRICE IDENTIFIER
+## IMPLEMENTATION
+### Price identifier
 #### 1. Read index basket
 1.1. Get IPFS address from smart contract.<br>
-1.2. Read INDEX5.JSON file from IPFS.<br>
-<br>
+1.2. Read INDEX5.JSON file from IPFS.<br><br>
+`
+JS code example <---------------------- Дима
+`
+<br><br>
 INDEX5.JSON file format (SPAC shares - TOP5 [Most Active SPACs Yahoo Finance](https://finance.yahoo.com/u/yahoo-finance/watchlists/most-active-spacs) at 08.10.2021):
 ```
 [
-    "Date": "08.10.2021",
+    “Date”: “08.10.2021”,  
     “K”: “1”,  
     “Share1”: “PSTH”,  
     “Share2”: “IPOF”,  
@@ -93,13 +95,20 @@ INDEX5.JSON file format (SPAC shares - TOP5 [Most Active SPACs Yahoo Finance](ht
 Real time and historical share prices are available from MarketStack.com (API).<br> 
 Price requests should use the `minute price ?????` that is nearest and later than the price request timestamp. To do this, voters should use the open price of the OHLC period that the price request timestamp falls in. MarketStack endpoints are queried based on the OHLC period's close time.
 <br><br>
-Example MarketStack request for a PSTH real time price (available on: Basic Plan and higher):
+Example MarketStack request for a PSTH real time **end-of-day** price (available on: All plans):
+```
+https://api.marketstack.com/v1/eod
+    ? access_key = YOUR_ACCESS_KEY
+    & symbols = PSTH
+```
+   
+Example MarketStack request for a PSTH real time **intraday** price (available on: Basic Plan and higher):
 ```
 http://api.marketstack.com/v1/intraday
     ? access_key = YOUR_ACCESS_KEY
     & symbols = PSTH
 ```
-Example MarketStack request for a PSTH historical price:
+Example MarketStack request for a PSTH **historical** price (Available on: All plans):
 ```
 http://api.marketstack.com/v1/eod
     ? access_key = YOUR_ACCESS_KEY
@@ -126,16 +135,46 @@ API Response Objects:
 |volume|  Returns the volume of the given stock ticker.|
 
 #### 3. Evaluate index value
-Summarize quotes of all 5 SPAC shares.<br>
-Divide result by 5 (number of shares).<br>
-Multiply result by K (correction factor).
+3.1. Sum up quotes of all 5 SPAC shares.<br>
+3.2. Divide result by 5 (number of shares).<br>
+3.3. Multiply result by K (correction factor).
 
 #### 4. Revise index basket
+4.1. In order to index can reliably reflect the market picture, a periodic change of the basket of of stocks included in the index is required.<br>
+Usually, revision of the index basket is carried out quarterly. The revision of the uSPAC5 index basket is carried out on the following dates:
+- last 5 days of March;
+- last 5 days of June;
+- last 5 days of September;
+- last 5 days of December.
 
-#### 5. Calculate K value
+In order to create new index bucket, you need to do the following:
+- Select the first 5 shares of SPAC by the link: [Most Active SPACs Yahoo Finance](https://finance.yahoo.com/u/yahoo-finance/watchlists/most-active-spacs);
+- Enter the tickers of these shares in the SPAC5.JSON file;
+- Calculate the value of correction factor K (see further point 4.2.) and enter it in the SPAC5.JSON;
+- Put it in the SPAC5.JSON date of change.
 
+4.2. Correction factor (**K**), used to smooth the index values when the basket is changed.<br>
+`The value of K calculated as quotient of division INDEXold by INDEXnew,`<br>
 
-### FUNDING RATE IDENTIFIER
+where:
+- INDEXold – the last index value calculated from the old basket;<br>
+- INDEXnew – the first index value calculated for the new basket at the same time as INDEXold;<br>
+
+The initial value of K is chosen arbitrarily, for example 1.
+
+#### 5. Change index basket
+5.1. Upload a new SPAC5 file.JSON in IPFS, get a link to the file.<br>
+5.2. Replace the link to the file in the smart contract by voting users.<br>
+
+When changing the composition of the index, the link to the new file is changed in the smart contract by voting. So, malicious modification of the index composition is impossible.
+
+### Funding rate identifier
+-
+-
+-
+-
+-
+-
 
 
 ### Weekend timestamp
@@ -146,71 +185,19 @@ Please note that this is different than the normal calculation process, which re
 ### Stock markets working hours
 Underlaying assets trade during exchange hours which leaves gaps in prices between 4:00PM EST close and 9:30AM EST open the next day and on weekends and market holidays.
 ### Price feed
->??????? Liquidation and dispute bots should have their own subscription to price feeds.
-
-Our price-feed provider’s API documentation can be found here: https://marketstack.com/documentation. A reference MarketStack implementation that is used by liquidator and dispute bots can be seen here: https://github.com/unisxapp/uma/commit/11db86a556098e2f71022c40ef3bb6d777e60f59.
-MarketStack is provided as an accessible source to query for this data, but ultimately how one queries for these rates should be varied and determined by the voter to ensure that there is no central point of failure.
+Our price-feed provider’s API documentation can be found [here](https://marketstack.com/documentation).<br>
+A reference MarketStack implementation that is used by liquidator, dispute and funding rate proposer bots can be seen [here](https://github.com/unisxapp/uma/commit/11db86a556098e2f71022c40ef3bb6d777e60f59). `<------------- Дима`<br>
+MarketStack is provided as an accessible source to query for this data, but ultimately how one queries for these rates should be varied and determined by the voter to ensure that there is no central point of failure.<br>
 In the case of a MarketStack outage voters can turn to any other available price feed API or a broker API, as the price feeds for the forementioned financial assets does not differ much between different providers. There might be some slight differences, however they are quite insignificant and would not affect the liquidation or dispute processes. For this case, we provide options for additional price feed providers that voters could utilize.
-### Additional price feed providers
-- **Yahoo Finance** – Rapidapi.com
-- Documentation for the API can be found here: https://rapidapi.com/apidojo/api/yahoo-finance1
-- Live price feed data
-- Historical prices based on date and time
-- Registration is free
-- Paid plans available: https://rapidapi.com/apidojo/api/yahoo-finance1/pricing
-- OHLC request can be used to grab the last closing price before a weekend or a non-working day
-- Example requests:
-```
-var axios = require("axios").default;
 
-var options = {
-  method: 'GET',
-  url: 'https://apidojo-yahoo-finance-v1.p.rapidapi.com/auto-complete',
-  params: {q: 'VIX', region: 'US'},
-  headers: {
-    'x-rapidapi-host': 'apidojo-yahoo-finance-v1.p.rapidapi.com',
-    'x-rapidapi-key': YOUR_ACCESS_KEY
-  }
-};
-
-axios.request(options).then(function (response) {
-  console.log(response.data);
-}).catch(function (error) {
-  console.error(error);
-});
-```
-- **Stock and Options Trading Data Provider API** – Rapidapi.com
-- Documentation for the API can be found here: https://rapidapi.com/mpeng/api/stock-and-options-trading-data-provider
-- Live price feed data
-- Historical prices based on date and time
-- Registration is free
-- Paid plans available: https://rapidapi.com/mpeng/api/stock-and-options-trading-data-provider/pricing
-- OHLC request can be used to grab the last closing price before a weekend or a non-working day
-- Example requests:
-```
-var axios = require("axios").default;
-
-var options = {
-  method: 'GET',
-  url: 'https://stock-and-options-trading-data-provider.p.rapidapi.com/straddle/SPY',
-  headers: {
-    'x-rapidapi-host': 'stock-and-options-trading-data-provider.p.rapidapi.com',
-    'x-rapidapi-key': YOUR_ACCESS_KEY
-  }
-};
-
-axios.request(options).then(function (response) {
-  console.log(response.data);
-}).catch(function (error) {
-  console.error(error);
-});
-```
-
-## Security considerations
+## SECURITY CONSIDERATIONS
 Security considerations are focused on the use of the token price for monitoring collateral ratios.
-- **Token price manipulation** - Under illiquid market conditions, an attacker could attempt to drive prices down to withdraw more collateral than normally allowed or drive prices up to trigger liquidations. However, it is important to note that almost all attacks that have been performed on DeFi projects are executed with flash loans, which allows the attacker to obtain leverage and instantaneously manipulate a price and extract collateral. Additionally, flash loans will have no effect on a tradable token price because the TWAP calculation is measured based on the price at the end of each block. Collateralization based off of a TWAP should make these attacks ineffective and would require attackers to use significantly more capital and take more risk to exploit any vulnerabilities.
-- **Mismatch between TWAP and gap higher in token price** - An aggressive gap higher in the token price accompanied by real buying and then a follow through rally could create a concern. In this scenario we could see the TWAP of the token significantly lag the actual market price and create an opportunity for sponsors to mint tokens with less collateral than what they can sell them from in the market. It is important to note that this is an edge case scenario either driven by an irrational change in market expectations or it can be driven by a “fat finger” mistake which is a vulnerability to any market. Even in this edge case we believe the design of the token and the parameters chosen should mitigate risks. The current Perpetual contract requires sponsors to mint tokens with enough collateral to meet the Global Collateral Ratio (GCR) which has stood well above 200% for other contracts. Therefore, assuming the GCR is similar for uVIX and uSPY, the market would need to first rally at least 100% before potentially being exposed. If the sponsor wishes to withdraw collateral below the GCR they would request a “slow withdrawal” which would subject him to a 2 hour “liveness period” where anybody can liquidate the position if it fell below the required collateral ratio. The combination of the GCR and 2 hour “liveness period” allows the 2 hour TWAP to “catch up” to the market price and would protect from this scenario and deter sponsors from attempting to exploit it.
 
+-
+-
+-
+
+***
 Security considerations, like the ones above, have been contemplated and addressed, but there is potential for security holes to emerge due to the novelty of this price identifier.
 
 Additionally, anyone deploying a new priceless token contract referencing this identifier should take care to parameterize the contract appropriately to avoid the loss of funds for synthetic token holders. Contract deployers should also ensure that there is a network of liquidators and disputers ready to perform the services necessary to keep the contract solvent.
