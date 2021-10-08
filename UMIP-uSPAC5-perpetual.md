@@ -16,7 +16,7 @@ In addition, that token can be used as components associated with classical mark
 
 ## Technical Specification
 - **Identifier name: uSPAC5**
-- Base asset: Most active SPAC shares, enumerated in SPAC5.JSON file, stored in IPFS. `variant = uSPAC5   ???????`
+- Base asset: Most active SPAC shares, enumerated in SPAC5.JSON file, stored in IPFS.
 - Quote Currency: USD
 - Intended Collateral Currency: USDC
 - Market: NYSE
@@ -24,7 +24,7 @@ In addition, that token can be used as components associated with classical mark
 https://marketstack.com/, API - Cost to use: Free - End-of-Day Data; Paid – Intraday Data (https://marketstack.com/plan)
 - Scaling Decimals: 18 (1e18)
 - Rounding: Round to nearest 6 decimal places (seventh decimal place digit >= 5 rounds up and < 5 rounds down)
-*********************
+-----------------------------------
 - **Identifier Name: uSPAC5_FR**
 - Base asset: uSPAC5_FR
 - Quote currency: None. This is a percentage.
@@ -35,7 +35,7 @@ https://marketstack.com/, API - Cost to use: Free - End-of-Day Data; Paid – In
 - Perpetual Contract Address: 0x_________________________________
 - UNISWAP Pool Address: 0x________________________________
 - UNISWAP Pair: uSPAC5/USDC
-***********************
+------------------------------------
 ## Rationale
 Special Purpose Acquisition Companies (“SPACs”) are companies formed to raise capital in an initial public offering (“IPO”) with the purpose of using the proceeds to acquire one or more unspecified businesses or assets to be identified after the IPO (irrespective of form, a “Business Combination”).<br>
 SPACs have only a limited period during which they may consummate a Business Combination, generally not exceeding 24 months.<br>
@@ -70,39 +70,41 @@ A 2-hour TWAP was chosen to mitigate any risk of attempted price manipulation at
 ### PRICE IDENTIFIER
 Historical VIX and SPY prices are available from MarketStack.com (API) and TadingView.com (Manually). 
 Price requests should use the minute price that is nearest and later than the price request timestamp. To do this, voters should use the open price of the OHLC period that the price request timestamp falls in. MarketStack endpoints are queried based on the OHLC period's close time.
-Example MarketStack request for a SPY real time price (available on: Basic Plan and higher):
+Example MarketStack request for a CCVI real time price (available on: Basic Plan and higher):
 ```
 http://api.marketstack.com/v1/intraday
     ? access_key = YOUR_ACCESS_KEY
-    & symbols = SPY
+    & symbols = CCVI
 ```
-Example MarketStack request for a VIX historical price:
+Example MarketStack request for a CCVI historical price:
 ```
 http://api.marketstack.com/v1/eod
     ? access_key = YOUR_ACCESS_KEY
-    & symbols = VIX.INDX
+    & symbols = CCVI
     & date_from = 2021-08-23
     & date_to = 2021-09-02
 ```
 API Response Objects:
-```
-Response Object  Description
-pagination > limit  Returns your pagination limit value.
-pagination > offset  Returns your pagination offset value.
-pagination > count  Returns the results count on the current page.
-pagination > total  Returns the total count of results available.
-date  Returns the exact UTC date/time the given data was collected in ISO-8601 format.
-symbol  Returns the stock ticker symbol of the current data object.
-exchange  Returns the exchange MIC identification associated with the current data object.
-open  Returns the raw opening price of the given stock ticker.
-high  Returns the raw high price of the given stock ticker.
-low  Returns the raw low price of the given stock ticker.
-close  Returns the raw closing price of the given stock ticker.
-last  Returns the last executed trade of the given symbol on its exchange.
-volume  Returns the volume of the given stock ticker.
-```
+
+|  Response Object  |Description                                                            |
+|:-----------------:|:----------------------------------------------------------------------|
+|pagination > limit|  Returns your pagination limit value.|
+|pagination > offset|  Returns your pagination offset value.|
+|pagination > count|  Returns the results count on the current page.|
+|pagination > total|  Returns the total count of results available.|
+|date|  Returns the exact UTC date/time the given data was collected in ISO-8601 format.|
+|symbol|  Returns the stock ticker symbol of the current data object.|
+|exchange|  Returns the exchange MIC identification associated with the current data object.|
+|open|  Returns the raw opening price of the given stock ticker.|
+|high|  Returns the raw high price of the given stock ticker.|
+|low|  Returns the raw low price of the given stock ticker.|
+|close|  Returns the raw closing price of the given stock ticker.|
+|last|  Returns the last executed trade of the given symbol on its exchange.|
+|volume|  Returns the volume of the given stock ticker.|
+
 
 ### FUNDING RATE IDENTIFIER
+
 
 ### Weekend timestamp
 Over the weekend or some official holidays the REST API does not return any price, but we can request the price of a certain moment before the market close (as ex: the closing price of Friday).
