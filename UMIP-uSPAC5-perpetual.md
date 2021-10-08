@@ -17,8 +17,9 @@ In addition, that token can be used as components associated with classical mark
 
 
 ## TECHNICAL SPECIFICATION
-|Identifier name| uSPAC5|
+| | |
 |:--------------------|:----------------------------------------------------------|
+|**Identifier name**|**uSPAC5**|
 |Base asset| Most active SPAC shares, enumerated in SPAC5.JSON file, stored in IPFS.|
 |Quote Currency| USD|
 |Intended Collateral Currency| USDC|
@@ -26,11 +27,7 @@ In addition, that token can be used as components associated with classical mark
 |Source|https://marketstack.com/, API - Cost to use: Free - End-of-Day Data; Paid – Intraday Data (https://marketstack.com/plan)|
 |Scaling Decimals| 18 (1e18)|
 |Rounding| Round to nearest 6 decimal places (seventh decimal place digit >= 5 rounds up and < 5 rounds down)|
-
-<br>
-
-|Identifier Name| uSPAC5_FR|
-|:--------------------|:----------------------------------------------------------|
+|**Identifier Name**|**uSPAC5_FR**|
 |Base asset| uSPAC5_FR|
 |Quote currency| None. This is a percentage.|
 |Scaling Decimals| 18|
@@ -38,8 +35,9 @@ In addition, that token can be used as components associated with classical mark
 |Synthetic Name| uSPAC5|
 |Synthetic Address| 0x___________________________________|
 |Perpetual Contract Address| 0x_________________________________|
-|UNISWAP Pool Address| 0x________________________________|
+|UNISWAP Pool Address| 0x________________________________ |
 |UNISWAP Pair| uSPAC5/USDC|
+
 
 ## Rationale
 Special Purpose Acquisition Companies (“SPACs”) are companies formed to raise capital in an initial public offering (“IPO”) with the purpose of using the proceeds to acquire one or more unspecified businesses or assets to be identified after the IPO (irrespective of form, a “Business Combination”).<br>
