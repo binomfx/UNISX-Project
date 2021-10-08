@@ -40,6 +40,7 @@ In addition, that token can be used as components associated with classical mark
 |Perpetual Contract Address| 0x_________________________________|
 |UNISWAP Pool Address| 0x________________________________|
 |UNISWAP Pair| uSPAC5/USDC|
+
 ## Rationale
 Special Purpose Acquisition Companies (“SPACs”) are companies formed to raise capital in an initial public offering (“IPO”) with the purpose of using the proceeds to acquire one or more unspecified businesses or assets to be identified after the IPO (irrespective of form, a “Business Combination”).<br>
 SPACs have only a limited period during which they may consummate a Business Combination, generally not exceeding 24 months.<br>
