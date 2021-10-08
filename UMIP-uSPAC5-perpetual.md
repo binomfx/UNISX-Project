@@ -18,7 +18,7 @@ In addition, that token can be used as components associated with classical mark
 
 ## TECHNICAL SPECIFICATION
 |Identifier name| uSPAC5|
-|:---------------------------|:--------------------------------------------------------------|
+|:--------------------|:----------------------------------------------------------|
 |Base asset| Most active SPAC shares, enumerated in SPAC5.JSON file, stored in IPFS.|
 |Quote Currency| USD|
 |Intended Collateral Currency| USDC|
@@ -30,7 +30,7 @@ In addition, that token can be used as components associated with classical mark
 <br>
 
 |Identifier Name| uSPAC5_FR|
-|:---------------------------|:--------------------------------------------------------------|
+|:--------------------|:----------------------------------------------------------|
 |Base asset| uSPAC5_FR|
 |Quote currency| None. This is a percentage.|
 |Scaling Decimals| 18|
