@@ -163,7 +163,7 @@ where:
 The initial value of K is chosen arbitrarily, for example 1.
 
 #### 5. Change index basket
-5.1. Upload a new SPAC5 file.JSON in IPFS, get a link to the file.<br>
+5.1. Upload a new SPAC5.JSON file in IPFS, get a link to the file.<br>
 5.2. Replace the link to the file in the smart contract by voting users.<br>
 
 When changing the composition of the index, the link to the new file is changed in the smart contract by voting. So, malicious modification of the index composition is impossible.
