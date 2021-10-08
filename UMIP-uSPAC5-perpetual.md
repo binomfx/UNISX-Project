@@ -68,19 +68,37 @@ A 2-hour TWAP was chosen to mitigate any risk of attempted price manipulation at
 
 ## Implementation
 ### PRICE IDENTIFIER
-Historical VIX and SPY prices are available from MarketStack.com (API) and TadingView.com (Manually). 
-Price requests should use the minute price that is nearest and later than the price request timestamp. To do this, voters should use the open price of the OHLC period that the price request timestamp falls in. MarketStack endpoints are queried based on the OHLC period's close time.
-Example MarketStack request for a CCVI real time price (available on: Basic Plan and higher):
+#### 1. Read index basket
+1.1. Get IPFS address from smart contract.<br>
+1.2. Read INDEX5.JSON file from IPFS.<br>
+<br>
+INDEX5.JSON file format (SPAC shares - TOP5 [Most Active SPACs Yahoo Finance](https://finance.yahoo.com/u/yahoo-finance/watchlists/most-active-spacs) at 08.10.2021):
+```
+[
+    “K”: “1”,  
+    “Share1”: “PSTH”,  
+    “Share2”: “IPOF”,  
+    “Share3”: “GGPI”,
+    “Share4”: “GSAH”,
+    “Share5”: “HZAC”  
+]
+```
+
+#### 2. Get shares quotes
+Real time and historical share prices are available from MarketStack.com (API).<br> 
+Price requests should use the `minute price ?????` that is nearest and later than the price request timestamp. To do this, voters should use the open price of the OHLC period that the price request timestamp falls in. MarketStack endpoints are queried based on the OHLC period's close time.
+<br><br>
+Example MarketStack request for a PSTH real time price (available on: Basic Plan and higher):
 ```
 http://api.marketstack.com/v1/intraday
     ? access_key = YOUR_ACCESS_KEY
-    & symbols = CCVI
+    & symbols = PSTH
 ```
-Example MarketStack request for a CCVI historical price:
+Example MarketStack request for a PSTH historical price:
 ```
 http://api.marketstack.com/v1/eod
     ? access_key = YOUR_ACCESS_KEY
-    & symbols = CCVI
+    & symbols = PSTH
     & date_from = 2021-08-23
     & date_to = 2021-09-02
 ```
@@ -101,6 +119,15 @@ API Response Objects:
 |close|  Returns the raw closing price of the given stock ticker.|
 |last|  Returns the last executed trade of the given symbol on its exchange.|
 |volume|  Returns the volume of the given stock ticker.|
+
+#### 3. Evaluate index value
+Summarize quotes o all 5 SPAC shares.<br>
+Divide result by 5 (number of shares).<br>
+Multiply result by K (correction factor).
+
+#### 4. Revise index basket
+
+#### 5. Calculate K value
 
 
 ### FUNDING RATE IDENTIFIER
