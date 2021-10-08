@@ -15,28 +15,32 @@ The purpose of these price identifier is to create synthetic token, price of whi
 A synthetic token that tracks the index of the 5 most active SPACs stocks can be used for speculative purposes and allows the user to earn on price movements in one of the most interesting markets without centralized intermediaries such as exchanges and brokers.<br> 
 In addition, that token can be used as components associated with classical markets by other DeFi and DApp protocols, which makes it possible to scale.
 
-## Technical Specification
-- **Identifier name: uSPAC5**
-- Base asset: Most active SPAC shares, enumerated in SPAC5.JSON file, stored in IPFS.
-- Quote Currency: USD
-- Intended Collateral Currency: USDC
-- Market: NYSE
-- Source:
-https://marketstack.com/, API - Cost to use: Free - End-of-Day Data; Paid – Intraday Data (https://marketstack.com/plan)
-- Scaling Decimals: 18 (1e18)
-- Rounding: Round to nearest 6 decimal places (seventh decimal place digit >= 5 rounds up and < 5 rounds down)
------------------------------------
-- **Identifier Name: uSPAC5_FR**
-- Base asset: uSPAC5_FR
-- Quote currency: None. This is a percentage.
-- Scaling Decimals: 18
-- Rounding: Round to nearest 9 decimal places (10th decimal place digit >= 5 rounds up and < 5 rounds down)
-- Synthetic Name: uSPAC5
-- Synthetic Address: 0x___________________________________
-- Perpetual Contract Address: 0x_________________________________
-- UNISWAP Pool Address: 0x________________________________
-- UNISWAP Pair: uSPAC5/USDC
-------------------------------------
+
+## TECHNICAL SPECIFICATION
+|Identifier name| uSPAC5|
+|:---------------------------|:--------------------------------------------------------------|
+|Base asset| Most active SPAC shares, enumerated in SPAC5.JSON file, stored in IPFS.|
+|Quote Currency| USD|
+|Intended Collateral Currency| USDC|
+|Market| NYSE|
+|Source|
+https://marketstack.com/, API - Cost to use: Free - End-of-Day Data; Paid – Intraday Data (https://marketstack.com/plan)|
+|Scaling Decimals| 18 (1e18)|
+|Rounding| Round to nearest 6 decimal places (seventh decimal place digit >= 5 rounds up and < 5 rounds down)|
+
+<br>
+
+|Identifier Name| uSPAC5_FR|
+|:---------------------------|:--------------------------------------------------------------|
+|Base asset| uSPAC5_FR|
+|Quote currency| None. This is a percentage.|
+|Scaling Decimals| 18|
+|Rounding| Round to nearest 9 decimal places (10th decimal place digit >= 5 rounds up and < 5 rounds down)|
+|Synthetic Name| uSPAC5|
+|Synthetic Address| 0x___________________________________|
+|Perpetual Contract Address| 0x_________________________________|
+|UNISWAP Pool Address| 0x________________________________|
+|UNISWAP Pair| uSPAC5/USDC|
 ## Rationale
 Special Purpose Acquisition Companies (“SPACs”) are companies formed to raise capital in an initial public offering (“IPO”) with the purpose of using the proceeds to acquire one or more unspecified businesses or assets to be identified after the IPO (irrespective of form, a “Business Combination”).<br>
 SPACs have only a limited period during which they may consummate a Business Combination, generally not exceeding 24 months.<br>
