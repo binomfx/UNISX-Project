@@ -87,7 +87,7 @@ http://api.marketstack.com/v1/eod
 API Response Objects:
 
 |  Response Object  |Description                                                            |
-|:-----------------:|:----------------------------------------------------------------------|
+|:------------------|:----------------------------------------------------------------------|
 |pagination > limit|  Returns your pagination limit value.|
 |pagination > offset|  Returns your pagination offset value.|
 |pagination > count|  Returns the results count on the current page.|
