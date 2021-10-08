@@ -75,6 +75,7 @@ A 2-hour TWAP was chosen to mitigate any risk of attempted price manipulation at
 INDEX5.JSON file format (SPAC shares - TOP5 [Most Active SPACs Yahoo Finance](https://finance.yahoo.com/u/yahoo-finance/watchlists/most-active-spacs) at 08.10.2021):
 ```
 [
+    "Date": "08.10.2021",
     “K”: “1”,  
     “Share1”: “PSTH”,  
     “Share2”: “IPOF”,  
@@ -121,7 +122,7 @@ API Response Objects:
 |volume|  Returns the volume of the given stock ticker.|
 
 #### 3. Evaluate index value
-Summarize quotes o all 5 SPAC shares.<br>
+Summarize quotes of all 5 SPAC shares.<br>
 Divide result by 5 (number of shares).<br>
 Multiply result by K (correction factor).
 
