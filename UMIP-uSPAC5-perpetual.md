@@ -23,8 +23,7 @@ In addition, that token can be used as components associated with classical mark
 |Quote Currency| USD|
 |Intended Collateral Currency| USDC|
 |Market| NYSE|
-|Source|
-https://marketstack.com/, API - Cost to use: Free - End-of-Day Data; Paid – Intraday Data (https://marketstack.com/plan)|
+|Source|https://marketstack.com/, API - Cost to use: Free - End-of-Day Data; Paid – Intraday Data (https://marketstack.com/plan)|
 |Scaling Decimals| 18 (1e18)|
 |Rounding| Round to nearest 6 decimal places (seventh decimal place digit >= 5 rounds up and < 5 rounds down)|
 
