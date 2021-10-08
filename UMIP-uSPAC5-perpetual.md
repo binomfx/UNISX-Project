@@ -17,7 +17,7 @@ In addition, that token can be used as components associated with classical mark
 
 
 ## TECHNICAL SPECIFICATION
-
+| | |
 |:--------------------|:----------------------------------------------------------|
 |**Identifier name**|**uSPAC5**|
 |Base asset| Most active SPAC shares, enumerated in SPAC5.JSON file, stored in IPFS.|
