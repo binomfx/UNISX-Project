@@ -73,12 +73,12 @@ A 2-hour TWAP was chosen to mitigate any risk of attempted price manipulation at
 ### Price identifier
 #### 1. Read index basket
 1.1. Get IPFS address from smart contract.<br>
-1.2. Read INDEX5.JSON file from IPFS.<br><br>
+1.2. Read SPAC5.JSON file from IPFS.<br><br>
 `
 JS code example <---------------------- Дима
 `
 <br><br>
-INDEX5.JSON file format (SPAC shares - TOP5 [Most Active SPACs Yahoo Finance](https://finance.yahoo.com/u/yahoo-finance/watchlists/most-active-spacs) at 08.10.2021):
+SPAC5.JSON file format (SPAC shares - TOP5 [Most Active SPACs Yahoo Finance](https://finance.yahoo.com/u/yahoo-finance/watchlists/most-active-spacs) at 08.10.2021):
 ```
 [
     “Date”: “08.10.2021”,  
