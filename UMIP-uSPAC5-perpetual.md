@@ -169,26 +169,28 @@ The initial value of K is chosen arbitrarily, for example 1.
 When changing the composition of the index, the link to the new file is changed in the smart contract by voting. So, malicious modification of the index composition is impossible.
 
 ### Funding rate identifier
-To calculate uSPAC5-FR, the following steps should be performed:
+1. To calculate uSPAC5-FR, the following steps should be performed:<br>
+1.1.<br>
+1.2.<br>
+1.3.<br>
 
--
--
-#### Calculation of the Cumulative Funding Rate Multiplier (CFRM)
-CFRM for a specific contract is stored on-chain for each perpetual contract. Vouters can request this on-chain data at the funding rate proposal timestamp in any way convenient for them.<br>
+2. Calculation of the Cumulative Funding Rate Multiplier (CFRM)<br>
+2.1. CFRM for a specific contract is stored on-chain for each perpetual contract.<br>
+2.2. Vouters can request this on-chain data at the funding rate proposal timestamp in any way convenient for them:
 - Simulation of `applyFundingRate` transaction. An example of this can be seen [here](). `<-----------------------------Дима. Или может быть оставить только один способ  вызов метода fundingRate?`<br>
 - Calling the `fundingRate` method of the uSPAC5 perpetual contract.<br><br>
-The results will be in the following format:
+2.3. The results will be in the following format:
 ```
-{
+   {
     rate,
     identifier,
     cumulativeMultiplier,
     updateTime,
     applicationTime,
     proposalTime
-}
+   }
 ```
-Vouters should use the `cumulativeMultipler` value.
+2.4. Vouters should use the `cumulativeMultipler` value.
 
 ### Weekend timestamp
 Over the weekend or some official holidays the REST API does not return any price, but we can request the price of a certain moment before the market close (as ex: the closing price of Friday).
