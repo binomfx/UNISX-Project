@@ -170,9 +170,16 @@ When changing the composition of the index, the link to the new file is changed 
 
 ### Funding rate identifier
 1. To calculate uSPAC5-FR, the following steps should be performed:<br>
-1.1.<br>
-1.2.<br>
-1.3.<br>
+1.1. Query for the 1-hour uSPAC5 TWAP, ending at the disputed funding rate proposal timestamp. This will consist of 60 queries for the close price of each 60 second ohlc period in that hour. `Вопрос по интервалам - если мы используем данные на конец дня, то как считать TWAP, и вообще - как его считать для нашего индекса?`<br>
+1.2. Query for the cumulative funding rate multiplier (CFRM) at the price request timestamp.<br>
+1.3. Then you should multiply the 1-hour TWAP of uSPAC5 and CFRM - this result will be called uSPAC5-FV in future steps.<br>
+1.4. Query for the 1-hour TWAP uSPAC5-PERP from the listed AMM pool. This will return TWAP uSPAC5-PERP denominated in USDC. This rate should be left as is, without conversion between USDC and USD.<br>
+1.5. Subtract the result of step 4 from the result of step 3. [uSPAC-FV - uSPAC5-PERP].<br>
+1.6. Divide the result of step 5 by uSPAC5-FV from step 4. [uSPAC5-FV - uSPAC5-PERP]/uSPAC5-FV.<br>
+1.7. Divide the result of step 6 by 86400 (number of seconds per day) to get the funding rate per second.<br>
+1.8. Implement min and max bounds on this result with: max(-0.00001, min(0.00001, result)).<br>
+1.9. Voters should then round this result to 9 decimal places.<br>
+1.10. Voters should determine whether the returned funding rate differs from broad market consensus. This is meant to provide flexibility in any unforeseen circumstances as voters are responsible for defining broad market consensus.
 
 2. Calculation of the Cumulative Funding Rate Multiplier (CFRM)<br>
 2.1. CFRM for a specific contract is stored on-chain for each perpetual contract.<br>
