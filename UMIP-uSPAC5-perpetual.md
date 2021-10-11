@@ -67,8 +67,6 @@ We suggest using the [MarketStack](https://marketstack.com/) API as the main sou
 
 Underlying stocks are trade during exchange hours which leaves gaps in prices between 4:00PM EST close and 9:30AM EST open the next day and on weekends and market holidays. 
 
-A 2-hour TWAP was chosen to mitigate any risk of attempted price manipulation attempts on the market price of the synthetic. To meaningfully manipulate the price that token sponsors’ collateralization is calculated with, an attacker would have to manipulate the trading price of a token for an extended amount of time. This is described further in the Security Considerations section.
-
 ## IMPLEMENTATION
 ### Price identifier
 #### 1. Read index basket
@@ -217,6 +215,7 @@ Security considerations are focused on the use of the token price for monitoring
 
 -
 -
+>A 2-hour TWAP was chosen to mitigate any risk of attempted price manipulation attempts on the market price of the synthetic. To meaningfully manipulate the price that token sponsors’ collateralization is calculated with, an attacker would have to manipulate the trading price of a token for an extended amount of time. 
 -
 
 ***
