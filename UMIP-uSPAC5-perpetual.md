@@ -206,15 +206,15 @@ Please note that this is different than the normal calculation process, which re
 Underlaying assets trade during exchange hours which leaves gaps in prices between 4:00PM EST close and 9:30AM EST open the next day and on weekends and market holidays.
 ### Price feed
 Our price-feed provider’s API documentation can be found [here](https://marketstack.com/documentation).<br>
-A reference MarketStack implementation that is used by liquidator, dispute and funding rate proposer bots can be seen [here](https://github.com/unisxapp/uma/commit/11db86a556098e2f71022c40ef3bb6d777e60f59). `<------------- Дима`<br>
+A reference MarketStack implementation that is used by liquidator, dispute and funding rate proposer bots can be seen [here]()<br>
 MarketStack is provided as an accessible source to query for this data, but ultimately how one queries for these rates should be varied and determined by the voter to ensure that there is no central point of failure.<br>
 In the case of a MarketStack outage voters can turn to any other available price feed API or a broker API, as the price feeds for the forementioned financial assets does not differ much between different providers. There might be some slight differences, however they are quite insignificant and would not affect the liquidation or dispute processes. For this case, we provide options for additional price feed providers that voters could utilize.
 
 ## SECURITY CONSIDERATIONS
 Security considerations are focused on the use of the token price for monitoring collateral ratios.
 
-1) Риск злонамеренного изменения корзины индекса отсутствует поскольку файл с перечнем входящих в индекс акций хранится в децентрализованной файловой системе IPFS и ссылка на него может быть изменена тодько в результате голосования пользователей.
-2) Риск манипулирования котировками акций, входящих в индекс незначителен поскольку используется надежный источник котировок. Кроме того, пользователи - воутеры и диспутеры - имеют возможность проверить расчет значения индекса на основе независимых источников котировок самостоятельно.
+1) There is no risk of malicious modification of the index basket because the file with the list of stocks included in the index is stored in a decentralized IPFS file system and the link to it can be changed only as a result of user voting.
+2) The risk of manipulation of stock quotes included in the index is insignificant because a reliable source of quotes is used. In addition, users - wouters and disputers - have the opportunity to check the calculation of the index value based on independent sources of quotations themselves.
 3) Token price manipulation risk - 1-hour TWAP was chosen to mitigate any risk of attempted price manipulation attempts on the market price of the synthetic. To meaningfully manipulate the price that token sponsors’ collateralization is calculated with, an attacker would have to manipulate the trading price of a token for an extended amount of time. 
 
 
