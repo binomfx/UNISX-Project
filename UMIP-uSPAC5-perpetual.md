@@ -71,11 +71,9 @@ Underlying stocks are trade during exchange hours which leaves gaps in prices be
 ### Price identifier
 #### 1. Read index basket
 1.1. Get IPFS address from smart contract.<br>
-1.2. Read SPAC5.JSON file from IPFS.<br><br>
-`
-JS code example <---------------------- Дима
-`
-<br><br>
+1.2. Read SPAC5.JSON file from IPFS.<br>
+
+
 SPAC5.JSON file format (SPAC shares - TOP5 [Most Active SPACs Yahoo Finance](https://finance.yahoo.com/u/yahoo-finance/watchlists/most-active-spacs) at 08.10.2021):
 ```
 [
@@ -168,9 +166,9 @@ When changing the composition of the index, the link to the new file is changed 
 
 ### Funding rate identifier
 1. To calculate uSPAC5-FR, the following steps should be performed:<br>
-1.1. Query for the 1-hour uSPAC5 TWAP, ending at the disputed funding rate proposal timestamp. This will consist of 60 queries for the close price of each 60 second ohlc period in that hour. `Вопрос по интервалам - если мы используем данные на конец дня, то как считать TWAP, и вообще - как его считать для нашего индекса?`<br>
+1.1. Query for the SPAC5 value at the disputed funding rate proposal timestamp.<br>
 1.2. Query for the cumulative funding rate multiplier (CFRM) at the price request timestamp.<br>
-1.3. Then you should multiply the 1-hour TWAP of uSPAC5 and CFRM - this result will be called uSPAC5-FV in future steps.<br>
+1.3. Then you should multiply the uSPAC5 value and CFRM - this result will be called uSPAC5-FV in future steps.<br>
 1.4. Query for the 1-hour TWAP uSPAC5-PERP from the listed AMM pool. This will return TWAP uSPAC5-PERP denominated in USDC. This rate should be left as is, without conversion between USDC and USD.<br>
 1.5. Subtract the result of step 4 from the result of step 3. [uSPAC-FV - uSPAC5-PERP].<br>
 1.6. Divide the result of step 5 by uSPAC5-FV from step 4. [uSPAC5-FV - uSPAC5-PERP]/uSPAC5-FV.<br>
@@ -182,7 +180,7 @@ When changing the composition of the index, the link to the new file is changed 
 2. Calculation of the Cumulative Funding Rate Multiplier (CFRM)<br>
 2.1. CFRM for a specific contract is stored on-chain for each perpetual contract.<br>
 2.2. Vouters can request this on-chain data at the funding rate proposal timestamp in any way convenient for them:
-- Simulation of `applyFundingRate` transaction. An example of this can be seen [here](). `<-----------------------------Дима. Или может быть оставить только один способ  вызов метода fundingRate?`<br>
+- Simulation of `applyFundingRate` transaction. An example of this can be seen [here]().<br>
 - Calling the `fundingRate` method of the uSPAC5 perpetual contract.<br><br>
 2.3. The results will be in the following format:
 ```
