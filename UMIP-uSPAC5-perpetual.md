@@ -1,4 +1,4 @@
-## HEADERS
+of## HEADERS
 |UMIP-<#>      | | 
 |:-------------|:-----------------------------------------------------------------------------|
 |UMIP title|Add uSPAC5 as price identifier and uSPAC5_FR as funding rate identifier|
@@ -92,7 +92,7 @@ SPAC5.JSON file format (SPAC shares - TOP5 [Most Active SPACs Yahoo Finance](htt
 
 #### 2. Get shares quotes
 Real time and historical share prices are available from MarketStack.com (API).<br> 
-Price requests should use the `minute price <------------------- ?????` that is nearest and later than the price request timestamp. To do this, voters should use the open price of the OHLC period that the price request timestamp falls in. MarketStack endpoints are queried based on the OHLC period's close time.
+Price requests should use the dayly price that is nearest and later than the price request timestamp. In the future, it is planned to use hourly and minute prices. To do this, voters should use the open price of the OHLC period that the price request timestamp falls in. MarketStack endpoints are queried based on the OHLC period's close time.
 <br><br>
 Example MarketStack request for a PSTH real time **end-of-day** price (available on: All plans):
 ```
@@ -134,7 +134,7 @@ API Response Objects:
 |volume|  Returns the volume of the given stock ticker.|
 
 #### 3. Evaluate index value
-3.1. Sum up quotes of all 5 SPAC shares.<br>
+3.1. Sum up weighted quotes of all 5 SPAC shares. Weighted quote is a share quote multiplied by corresponding weihgt from SPAC5.JSON file.<br>
 3.2. Divide result by 5 (number of shares).<br>
 3.3. Multiply result by K (correction factor).
 
