@@ -213,10 +213,10 @@ In the case of a MarketStack outage voters can turn to any other available price
 ## SECURITY CONSIDERATIONS
 Security considerations are focused on the use of the token price for monitoring collateral ratios.
 
--
--
->A 2-hour TWAP was chosen to mitigate any risk of attempted price manipulation attempts on the market price of the synthetic. To meaningfully manipulate the price that token sponsors’ collateralization is calculated with, an attacker would have to manipulate the trading price of a token for an extended amount of time. 
--
+1) Риск злонамеренного изменения корзины индекса отсутствует поскольку файл с перечнем входящих в индекс акций хранится в децентрализованной файловой системе IPFS и ссылка на него может быть изменена тодько в результате голосования пользователей.
+2) Риск манипулирования котировками акций, входящих в индекс незначителен поскольку используется надежный источник котировок. Кроме того, пользователи - воутеры и диспутеры - имеют возможность проверить расчет значения индекса на основе независимых источников котировок самостоятельно.
+3) Token price manipulation risk - 1-hour TWAP was chosen to mitigate any risk of attempted price manipulation attempts on the market price of the synthetic. To meaningfully manipulate the price that token sponsors’ collateralization is calculated with, an attacker would have to manipulate the trading price of a token for an extended amount of time. 
+
 
 ***
 Security considerations, like the ones above, have been contemplated and addressed, but there is potential for security holes to emerge due to the novelty of this price identifier.
