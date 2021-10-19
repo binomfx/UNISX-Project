@@ -1,7 +1,7 @@
 ## HEADERS
 |UMIP-<#>      | | 
 |:-------------|:-----------------------------------------------------------------------------|
-|UMIP title|Add uSPAC5____ as price identifier|
+|UMIP title|Add uSPAC5 as price identifier|
 |Author|BinomFX (binomfx@gmail.com)|
 |Status|Draft| 
 |Created|18.10.2021|
@@ -18,7 +18,7 @@ In addition, that token can be used as components associated with classical mark
 ## TECHNICAL SPECIFICATION
 | | |
 |:---------------------------|:---------------------------------------------------|
-|**Identifier name**         |**uSPAC5_____**|
+|**Identifier name**         |**uSPAC5**|
 |Base asset                  | Most active SPAC shares, enumerated in SPAC5.JSON file, stored in IPFS.|
 |Quote Currency              | USD|
 |Intended Collateral Currency| USDC|
