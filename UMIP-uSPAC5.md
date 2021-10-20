@@ -240,8 +240,6 @@ Security considerations are focused on the use of the token price for monitoring
 
 1) There is no risk of malicious modification of the index basket because the file with the list of stocks included in the index is stored in a decentralized IPFS file system and the link to it can be changed only as a result of user voting.
 2) The risk of manipulation of stock quotes included in the index is insignificant because a reliable source of quotes is used. In addition, users - wouters and disputers - have the opportunity to check the calculation of the index value based on independent sources of quotations themselves.
-3) Token price manipulation risk - 1-hour TWAP was chosen to mitigate any risk of attempted price manipulation attempts on the market price of the synthetic. To meaningfully manipulate the price that token sponsors’ collateralization is calculated with, an attacker would have to manipulate the trading price of a token for an extended amount of time. 
-
 
 ***
 Security considerations, like the ones above, have been contemplated and addressed, but there is potential for security holes to emerge due to the novelty of this price identifier.
