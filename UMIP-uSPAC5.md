@@ -59,7 +59,7 @@ Underlying stocks are traded during exchange hours which leaves gaps in prices b
 ## IMPLEMENTATION
 ### Price Identifier
 The list of stocks included in the index basket are stored in the INDEX5.JSON file.
-This file is safely hosted in a decentralized IPFS file storage. The link to access the file and the hash of the file is stored in a special smart contract _____smart contract name______, available at address 0x_____________________.<br><br>
+This file is safely hosted in a decentralized IPFS file storage. The link to access the file is stored in a special smart contract _____smart contract name_____, available at address 0x_____________________.<br><br>
 In order to determine the index value, the following steps are required:
 #### 1. Read index basket
 1.1. Get IPFS address from smart contract.<br>
