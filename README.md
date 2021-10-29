@@ -81,9 +81,9 @@ The user selects the instrument row in the instrument table or in the portfolio 
 
 = the number of corresponding tokens in the user's wallet (green numbers under the name of tokens),
 
-= number of security tokens for already issued synthetics (red numbers to the right of "Max:"),
+= number of collateral tokens for already issued synthetics (red numbers to the right of "Max:"),
 
-= the field to the left of the name of the security token is filled with a zero value,
+= the field to the left of the name of the collateral token is filled with a zero value,
 
 = Collateral Ratio = (Synt amount / Collateral amount) * Synt price,
 
@@ -97,11 +97,11 @@ The user selects the instrument row in the instrument table or in the portfolio 
 
 = accrued rewards.
 
-Для **выпуска** синтетического токена пользователь должен выполнить следующие действия:
-- ввести количество токенов обеспечения, которое пользователь готов использовать для выпуска синтетических токенов, количество выпускаемых синтетиков заполняется автоматически с учетом collateral requirement 
-    *ИЛИ*
-- ввести количество синтетических токенов, которое поьзователь желает выпустить, требуемое количество токенов обеспечения заполняется автоматически с учетом collateral requirement
-- нажать кнопку MINT.
+To **issue** a synthetic token, the user must perform the following actions:
+- enter the number of collateral tokens that the user is ready to use for the issue of synthetic tokens, the number of synthetics produced is filled in automatically taking into account the collateral requirement
+    *OR*
+- enter the number of synthetic tokens that the user wishes to issue, the required number of collateral tokens is filled in automatically taking into account the collateral requirement
+- press the MINT button.
 
 Для **сжигания** токена пользователь должен выполнить следующие действия:
 - выбрать строку соответствующего токена в таблице портфеля
