@@ -4,8 +4,7 @@
 
 2. The new asset is a synthetic token, the price of which is tied to the price of some off-chain asset (the underlying asset) - whether it has an exchange quotation or not.
 At the same time, the price of the underlying asset is translated into a smart contract using the price oracle mechanism.
-
-![image](https://user-images.githubusercontent.com/89580052/134311115-c2b8f478-3278-4906-9053-a069469828fa.png)
+![GT tokenomics-eng UniSX minting](https://user-images.githubusercontent.com/89580052/139488635-28af33e4-f9c2-4664-9576-cbe497dbd411.jpg)
 
 3. The synthetic token is secured by a pledge of stablecoins, which are debited from the user's (Sponsor's) wallet at the time of the release of the synthetic token and are blocked on the contract. The collateral ratio (the ratio of collateral value and discounted collateral value – Kc = Nc / Cd) depends on the volatility of the asset whose price is used, but in any case exceeds 100%.
 In addition, the sponsor receives a reward for minting in the form of governance tokens (GT), which are used both for voting on the development of the service and as a profitable asset.
