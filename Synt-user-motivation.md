@@ -1,4 +1,4 @@
-# Why does the user issue synthetic UniSX tokens
+# Why does the user issue synthetic tokens
 
 1. The purpose of issuing synthetic tokens for the user is to create a new asset based on low-yielding low-volatile assets owned by him, such as stablecoins, capable of bringing higher returns at reasonable risk.
 
