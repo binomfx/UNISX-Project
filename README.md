@@ -11,7 +11,7 @@ At the MVP stage, to speed up development, it is proposed to create a synthetic 
 
 ## MVC-B architecture
 When developing the project, it is assumed to use the MVC-B architecture (Model, View, Control, Blockchain):
-![image](https://user-images.githubusercontent.com/89580052/134306689-7cf6fd5b-630c-43b1-9a68-08d0b979301b.png)
+![MVC-B-en](https://user-images.githubusercontent.com/89580052/139449075-acb9a2ee-f061-4f0a-a5ff-d4f97ad817fd.jpg)
 
 1. User interface (VIEW LOGIC) - a web or mobile application that interacts with the control logic.
 2. DATA MODEL – a schema of the application's local data, including documents and large files.
@@ -50,15 +50,15 @@ The WEB interface includes the following main pages:
 The following elements are displayed on the application page:
 ![SPACsynt - contracts-UI2 (1)](https://user-images.githubusercontent.com/89580052/134804321-e3e0da96-291f-436b-913d-6772db1a8806.jpg)
 
-**Элемент 1)** В правом верхнем углу располагается кнопка подключения к кошельку пользователя Connect Walet. Слева от этой кнопки - информационное поле, содержащее наименование сети и адрес кошелька.
+****Element 1)** In the upper right corner there is a button to connect to the user's wallet Connect Wallet. To the left of this button is an information field containing the name of the network and the wallet address.
 
-**Элемент 2)** В левом верхнем углу располагается кнопка перехода к внешнему интерфейсу голосования Vote.
+**Element 2)** In the upper left corner there is a button to go to the external voting interface Vote.
 
-**Элемент 3)** Интерфейс INSTRUMENTS / PORTFOLIO, отображающий возможности выпуска производных и портфель пользователя.
-Пользователь может выбрать строку в таблице INSTRUMENTS или PORTFOLIO. В соответствии с выбранной строкой предзаполняются данные в интерфейсах Элемента 2.
+**Element 3)** The INSTRUMENTS/PORTFOLIO interface, which displays the possibilities of issuing derivatives and the user's portfolio.
+The user can select a row in the INSTRUMENTS or PORTFOLIO table. In accordance with the selected line, data is prefilled in the interfaces of Element 2.
 
-**Элемент 4)** Группа интерфейсов операций (MINT/POOL/STAKE) - пользователь выбирает вкладку, соответствующую требуемой ему операции – минтинг, помещение в пул ликвидности, стейкинг. 
-Часть полей в этом элементе заполняется автоматически на основе выбранной в первом элементе строки.
+**Element 4)** Group of operation interfaces (MINT/POOL/STAKE) - the user selects the tab corresponding to the operation he needs – minting, placement in the liquidity pool, staking. 
+Some of the fields in this element are filled in automatically based on the row selected in the first element.
 
 #### Интерфейс MINT
 Выпуск и сжигание синтетических токенов. 
