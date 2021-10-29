@@ -60,42 +60,42 @@ The user can select a row in the INSTRUMENTS or PORTFOLIO table. In accordance w
 **Element 4)** Group of operation interfaces (MINT/POOL/STAKE) - the user selects the tab corresponding to the operation he needs – minting, placement in the liquidity pool, staking. 
 Some of the fields in this element are filled in automatically based on the row selected in the first element.
 
-#### Интерфейс MINT
-Выпуск и сжигание синтетических токенов. 
+#### MINT Interface
+Minting and burning of synthetic tokens.
 
 ![SPACsynt - contracts-MINT-UI (6)](https://user-images.githubusercontent.com/89580052/134819208-54471a91-abb6-493f-ad16-789a379012d3.jpg)
 
-Пользователь выбирает строку инструмента в таблице инструментов или в таблице портфеля (если пользователь уже выпускал такие токены), на вкладке автоматически заполняются: 
+The user selects the instrument row in the instrument table or in the portfolio table (if the user has already issued such tokens), the tab is automatically filled in:
 
-- поля левой части: 
+- fields of the left part:
 
-    = Collateral (наименование токена), 
+= Collateral (token name),
 
-    = Synt ticker (наименование синтетика), 
+= Synt ticker (name of synthetic),
 
-    = количество соответствующих токенов в кошельке пользователя (зеленые цифры под названием токенов); 
-    
-- поля правой части: 
-    
-    = Collateral (наименование токена), 
-    
-    = количество соответствующих токенов в кошельке пользователя (зеленые цифры под названием токенов), 
-    
-    = количество токенов обеспечения для уже выпущенных синтетиков (красные цифры справа от "Max:"), 
-    
-    = поле слева от наименование токена обеспечения заполняется нулевым значением,
-    
-    = Collateral Ratio = (Synt amount / Collateral amount) * Synt price, 
-    
-    = Liquidation Price - показывает при каком значении цены появляется риск ликвидации.
-    
-- поля средней части:
+= the number of corresponding tokens in the user's wallet (green numbers under the name of tokens);
 
-    = виджет графика котировок инструмента,
-    
-    = описание инструмента,
-    
-    = начисленное вознаграждение в токенах UNISX и UMA.
+- fields of the right part:
+
+= Collateral (token name),
+
+= the number of corresponding tokens in the user's wallet (green numbers under the name of tokens),
+
+= number of security tokens for already issued synthetics (red numbers to the right of "Max:"),
+
+= the field to the left of the name of the security token is filled with a zero value,
+
+= Collateral Ratio = (Synt amount / Collateral amount) * Synt price,
+
+= Liquidation Price - shows at what price value the liquidation risk appears.
+
+- fields of the middle part:
+
+= widget of the instrument quotes chart,
+
+= description of the tool,
+
+= accrued rewards.
 
 Для **выпуска** синтетического токена пользователь должен выполнить следующие действия:
 - ввести количество токенов обеспечения, которое пользователь готов использовать для выпуска синтетических токенов, количество выпускаемых синтетиков заполняется автоматически с учетом collateral requirement 
