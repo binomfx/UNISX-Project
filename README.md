@@ -69,33 +69,33 @@ The user selects the instrument row in the instrument table or in the portfolio 
 
 - fields of the left part:
 
-= Collateral (token name),
+   = Collateral (token name),
 
-= Synt ticker (name of synthetic),
+   = Synt ticker (name of synthetic),
 
-= the number of corresponding tokens in the user's wallet (green numbers under the name of tokens);
+   = the number of corresponding tokens in the user's wallet (green numbers under the name of tokens);
 
 - fields of the right part:
 
-= Collateral (token name),
+   = Collateral (token name),
 
-= the number of corresponding tokens in the user's wallet (green numbers under the name of tokens),
+   = the number of corresponding tokens in the user's wallet (green numbers under the name of tokens),
 
-= number of collateral tokens for already issued synthetics (red numbers to the right of "Max:"),
+   = number of collateral tokens for already issued synthetics (red numbers to the right of "Max:"),
 
-= the field to the left of the name of the collateral token is filled with a zero value,
+   = the field to the left of the name of the collateral token is filled with a zero value,
 
-= Collateral Ratio = (Synt amount / Collateral amount) * Synt price,
+   = Collateral Ratio = (Synt amount / Collateral amount) * Synt price,
 
-= Liquidation Price - shows at what price value the liquidation risk appears.
+   = Liquidation Price - shows at what price value the liquidation risk appears.
 
 - fields of the middle part:
 
-= widget of the instrument quotes chart,
+   = widget of the instrument quotes chart,
 
-= description of the tool,
+   = description of the tool,
 
-= accrued rewards.
+   = accrued rewards.
 
 To **mint** a synthetic token, the user must perform the following actions:
 - enter the number of collateral tokens that the user is ready to use for the issue of synthetic tokens, the number of synthetics produced is filled in automatically taking into account the collateral requirement
@@ -112,10 +112,10 @@ To **burn** the token, the user must perform the following actions:
 
 To **increase** the collateral of already issued tokens, the user must perform the following actions:
 - specify the number of collateral tokens to be added in the right part of the interface
-- - click the SUPPLY button.
+- click the SUPPLY button.
 
 To **withdraw** excess collateral of already issued tokens, the user must perform the following actions:
-- - specify the amount of tokens to be removed from the collateral on the right side of the interface
+- specify the amount of tokens to be removed from the collateral on the right side of the interface
 - press the WITHDRAW button.
 
 To **receive the accrued rewards** it is required to press the CLAIM REWARD button.
