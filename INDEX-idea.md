@@ -1,6 +1,6 @@
-# An approach to creating a synthetic UMA token (perpetual) that track the index value
+# An approach to creating a synthetic UMA token (EMP and Perpetual) that track the index value
 
-It is supposed to create synthetic tokens (perpetual), the price of which is tied to the values of various indexes. 
+It is supposed to create synthetic tokens (EMP and later perpetual), the price of which is tied to the values of various indexes. 
 
 Examples of possible indexes:
 - **SPAC-5** - An index that includes the shares of the 5 most active SPAC according to [Yahoo.Finance](https://finance.yahoo.com/u/yahoo-finance/watchlists/most-active-spacs)
