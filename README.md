@@ -97,28 +97,28 @@ The user selects the instrument row in the instrument table or in the portfolio 
 
 = accrued rewards.
 
-To **minting** a synthetic token, the user must perform the following actions:
+To **mint** a synthetic token, the user must perform the following actions:
 - enter the number of collateral tokens that the user is ready to use for the issue of synthetic tokens, the number of synthetics produced is filled in automatically taking into account the collateral requirement
     *OR*
 - enter the number of synthetic tokens that the user wishes to issue, the required number of collateral tokens is filled in automatically taking into account the collateral requirement
 - press the MINT button.
 
-Для **сжигания** токена пользователь должен выполнить следующие действия:
-- выбрать строку соответствующего токена в таблице портфеля
-- ввести количество токенов обеспечения, которое пользователь желает получить, количество сжигаемых синтетиков заполняется автоматически с учетом collateral requirement 
-    *ИЛИ*
-- ввести количество сжигаемых синтетических токенов, возвращаемое пользователю количество токенов обеспечения заполняется автоматически с учетом collateral requirement
-- нажать кнопку BURN.
+To **burn** the token, the user must perform the following actions:
+- select the row of the corresponding token in the portfolio table
+- enter the number of collateral tokens that the user wants to receive, the number of burned synthetics is filled in automatically taking into account the collateral requirement 
+    *OR*
+- enter the number of synthetic tokens to be burned, the number of collateral tokens returned to the user is filled in automatically taking into account the collateral requirement
+- press the BURN button.
 
-Для **пополнения** обеспечения уже выпущенных токенов пользователь должен выполнить следующие действия:
-- указать количество добавляемых токенов обеспечения в правой части интерфейса
-- нажать конопку SUPPLY.
+To **increase** the collateral of already issued tokens, the user must perform the following actions:
+- specify the number of collateral tokens to be added in the right part of the interface
+- - click the SUPPLY button.
 
-Для **вывода** избыточного обеспечения уже выпущенных токенов пользователь должен выполнить следующие действия:
-- указать количество выводимых токенов обеспечения в правой части интерфейса
-- нажать кнопку WITHDRAW.
+To **withdraw** excess collateral of already issued tokens, the user must perform the following actions:
+- - specify the amount of tokens to be removed from the collateral on the right side of the interface
+- press the WITHDRAW button.
 
-Для **получения начисленного вознаграждения** требуется нажать кнопку CLAIM REWARDS.
+To **receive the accrued rewards** it is required to press the CLAIM REWARD button.
 
 #### Интерфейс POOL
 Помещение / возврат токенов в пул ликвидности UNISWAP v3.
@@ -185,11 +185,9 @@ To **minting** a synthetic token, the user must perform the following actions:
 - указать количество токенов в правой части вкладки
 - нажать кнопку UNSTAKE. 
 
-Для **получения начисленного вознаграждения** пользователь должен нажать кнопку CLAIM REWARDS.
+To **receive the accrued rewards** it is required to press the CLAIM REWARD button.
 
-#### Интерфейс REG
-Служебный интерфейс для регистрации новых UniSX и удаления деривативов по которым принято такое решение по итогам голосования.
+## Module structure
+The system includes two types of modules: CONTROL LOGIC (off-chain) and BLOCKCHAIN LOGIC (on-chain), interacting with each other and with the user:
 
-## Структура модулей
-Система включает два типа модулей: УПРАВЛЯЮЩАЯ ЛОГИКА (off-chain) и ЛОГИКА БЛОКЧЕЙН (on-chain), взаимодействующие между собой и с пользователем:
 ![SPACsynt - contracts-Architecture 3](https://user-images.githubusercontent.com/89580052/134308055-99b53e17-ce76-4dde-9765-921a730a2f1a.jpg)
