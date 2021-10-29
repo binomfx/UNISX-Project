@@ -50,7 +50,7 @@ The WEB interface includes the following main pages:<br>
 The following elements are displayed on the application page:
 ![SPACsynt - contracts-UI2 (1)](https://user-images.githubusercontent.com/89580052/134804321-e3e0da96-291f-436b-913d-6772db1a8806.jpg)
 
-****Element 1)** In the upper right corner there is a button to connect to the user's wallet Connect Wallet. To the left of this button is an information field containing the name of the network and the wallet address.
+**Element 1)** In the upper right corner there is a button to connect to the user's wallet Connect Wallet. To the left of this button is an information field containing the name of the network and the wallet address.
 
 **Element 2)** In the upper left corner there is a button to go to the external voting interface Vote.
 
