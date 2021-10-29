@@ -15,10 +15,10 @@ To do this, the sponsor must have the necessary amount of synthetic tokens on th
 
 5. A change in the price of the underlying asset leads to a profit or loss on the sponsor's position.
 - When the price of the underlying asset decreases, the sponsor makes a profit:
-![image](https://user-images.githubusercontent.com/89580052/134312517-38fe0bdd-4981-4e83-b8cf-205540f565ac.png)
+![image](https://user-images.githubusercontent.com/89580052/139483968-739b99f1-b1f3-4b74-8478-8335ac1e46c5.png)
 
 - If the price of the underlying asset increases, the sponsor may incur a loss, which is expressed in the need to increase the collateral:
-![image](https://user-images.githubusercontent.com/89580052/134312693-e62dc8ac-12fb-43cd-b69d-03640b977e72.png)
+![image](https://user-images.githubusercontent.com/89580052/139484030-e0352fc9-0711-4f8d-bf1d-6b867b952b52.png)
 
 - In this case, the sponsor should deposit additional stablecoins to secure a synthetic token or "burn" part of the synthetic tokens.
 - Otherwise, a liquidation procedure is initiated, during which the liquidator is determined, who receives the right to make the necessary additional collateral and "burn" the synthetic tokens belonging to him by receiving a part of the stablecoins pledged by the sponsor. The number of synthetic tokens "burned" by the liquidator is determined in such a way that, as a result of liquidation, the remaining synthetic tokens are fully secured. The liquidator receives remuneration in the amount of 10%, which is paid out of the discount amount. The sponsor will see in the contract that the number of synthetic tokens has decreased, the provision has decreased, but the remaining synthetic tokens are secured.
