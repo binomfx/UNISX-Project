@@ -97,7 +97,7 @@ The user selects the instrument row in the instrument table or in the portfolio 
 
 = accrued rewards.
 
-To **issue** a synthetic token, the user must perform the following actions:
+To **minting** a synthetic token, the user must perform the following actions:
 - enter the number of collateral tokens that the user is ready to use for the issue of synthetic tokens, the number of synthetics produced is filled in automatically taking into account the collateral requirement
     *OR*
 - enter the number of synthetic tokens that the user wishes to issue, the required number of collateral tokens is filled in automatically taking into account the collateral requirement
