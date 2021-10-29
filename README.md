@@ -1,7 +1,7 @@
 # UNISX-Project
 
 ## Project purpose
-The purpose of the project is to create a service designed to issue synthetic tokens, the price of which is tied to the price of stocks and indexes on the stock exchange, as well as derivatives – options, futures, credit swaps.
+The purpose of the project is to create a service designed to [issue synthetic tokens](https://github.com/UniSX-App/UNISX-Project/blob/main/Synt-user-motivation.md), the price of which is tied to the price of stocks and indexes on the stock exchange, as well as derivatives – options, futures, credit swaps.
 
 ## Minimally Viable Product (MVP)
 At the initial stage, it is supposed to create a minimally viable product with minimal effort and cost.
