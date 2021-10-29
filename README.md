@@ -7,7 +7,7 @@ The purpose of the project is to create a service designed to issue synthetic to
 At the initial stage, it is supposed to create a minimally viable product with minimal effort and cost.
 The project is being developed on the UMA protocol.
 The task of the MVP is to check the concept and clarify the parameters of the project.
-At the MVP stage, to speed up development, it is proposed to create a synthetic token linked to [the index of the 5 most active SPACs stock](), see UMIP  https://github.com/UMAprotocol/UMIPs/pull/399
+At the MVP stage, to speed up development, it is proposed to create a synthetic token linked to [the index of the 5 most active SPACs stock](https://github.com/UniSX-App/UNISX-Project/blob/main/INDEX-idea.md), see UMIP  https://github.com/UMAprotocol/UMIPs/pull/399
 
 ## MVC-B architecture
 When developing the project, it is assumed to use the MVC-B architecture (Model, View, Control, Blockchain):
