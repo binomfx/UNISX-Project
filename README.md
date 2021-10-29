@@ -20,35 +20,34 @@ When developing the project, it is assumed to use the MVC-B architecture (Model,
 - The control logic is complemented by smart contracts. 
 - The data model is complemented by transactions.
 
-## Пользовательский интерфейс
-### ВЕБ-интерфейс
-Предполагается создание ВЕБ-интерфейса, позволяющего пользователю выпустить синтетический токен, цена которого привязана к цене биржевого актива, поместить синтетический токен в пул ликвидности DEX, а также осуществлять стейкинг токенов проекта внутри проекта. За выполнение каждой из этих трех операций пользователь получает вознаграждение в токенах управления GT, токенах платформы OPIUM, а также токены пулов ликвидности LP.
-ВЕБ-интерфейс включает следующие основные страницы:
+## User Interface
+### WEB interface
+It is planned to create a WEB interface that allows the user to issue a synthetic token, the price of which is tied to the price of an exchange asset, place a synthetic token in the DEX liquidity pool, and also stake project tokens within the project. For performing each of these three operations, the user receives a reward in UNISX management tokens, as well as LP-tokens of DEX liquidity pools.<br>
+The WEB interface includes the following main pages:
 ![image](https://user-images.githubusercontent.com/89580052/134307104-9fa38231-6202-43a0-9429-1a80682244a8.png)
 
-**Home** – домашняя страница, содержит общие сведения или рекламную информацию.
+**Home** – the home page contains general information or advertising information.
 
-**Connect Wallet** – страница или всплывающее окно с перечнем кошельков к которым можно подключиться. Вызывается с домашней страницы если кошелек пользователя еще не подключен.
+**Connect Wallet** – a page or pop-up window with a list of wallets to which you can connect. Called from the home page if the user's wallet is not connected yet.
 
-**Instruments/Portfolio** – страница на которой отображается перечень инструментов которые может выпустить пользователь, а также портфель пользователя.
+**Instruments/Portfolio** - a page that displays a list of instruments that the user can release, as well as the user's portfolio.
 
-**Mint** – интерфейс для выпуска и сжигания синтетических токенов.
+**Mint** is an interface for issuing and burning synthetic tokens.
 
-**Pool** – интерфейс для передачи токенов в пулы ликвидности DEX и возврата из пулов.
+**Pool** is an interface for transferring tokens to DEX liquidity pools and returning from pools.
 
-**Stake** – интерфейс стейкинга токенов проекта.
+**Stake** - the project token staking interface.
 
-**Vote** – интерфейс голосования.
+**Vote** - voting interface.
 
-**Doc** – документация сервиса.
+**Doc** - documentation of the service.
 
-**FAQ** – часто встречающиеся вопросы и ответы на них.
+**FAQ** - Frequently asked questions and answers to them.
 
-**About Us** – Сведения о команде проекта.
+**About Us** – Information about the project team.
  
-### Элементы интерфейса
-На странице приложения отображаются следующие элементы:
-
+### Interface Elements
+The following elements are displayed on the application page:
 ![SPACsynt - contracts-UI2 (1)](https://user-images.githubusercontent.com/89580052/134804321-e3e0da96-291f-436b-913d-6772db1a8806.jpg)
 
 **Элемент 1)** В правом верхнем углу располагается кнопка подключения к кошельку пользователя Connect Walet. Слева от этой кнопки - информационное поле, содержащее наименование сети и адрес кошелька.
