@@ -120,70 +120,70 @@ To **withdraw** excess collateral of already issued tokens, the user must perfor
 
 To **receive the accrued rewards** it is required to press the CLAIM REWARD button.
 
-#### Интерфейс POOL
-Помещение / возврат токенов в пул ликвидности UNISWAP v3.
+#### POOL Interface
+Placement/return of tokens to the UNISWAP v3 liquidity pool.
 
 ![SPACsynt - contracts-POOL-UI (3)](https://user-images.githubusercontent.com/89580052/134819803-885d78fe-4f40-4e46-a246-d658ced4a34a.jpg)
 
-Для **помещения токенов проекта в пул ликвидности** пользователь должен выбрать в таблице портфеля строку синтетического токена или токена UNISX, при этом на вкладке автоматически заполняется поле с названием синтетическлого токена или UNISX, а также количество соответствующих токенов в потфеле (зеленые цифры под названием токена). Далее пользователь выполняет следуюие действия:
-- выбрать стейблкоин из выпадающегоменю, при этом автоматически запорлняется количество соответствующих токенов в потфеле (зеленые цифры под названием токена),
-- указать количество синтетических токенов или токенов UNISWAP, помещаемых в пул, требуемое количество стейблкойнов рассчитывается автоматически и отображается слева от названия стейблкойна,
-    *ИЛИ*
-- указать количество стейблкойнов, помещаемых в пул, требуемое количество синтетических токенов или токенов UNISWAP рассчитывается автоматически и отображается слева от названия токена,
-- выбрать величину комиссии,
-- указать верхнюю и нижнюю границы цены,
-- нажать кнопку POOL.
+To **place the project tokens in the liquidity pool**, the user must select a row of synthetic token or UNISX token in the portfolio table, while the field with the name of the synthetic token or UNISX is automatically filled in on the tab, as well as the number of corresponding tokens in the potfel (green numbers under the name of the token). Next, the user performs the following actions:
+- select a stablecoin from the drop-down menu, and the number of corresponding tokens in the potfel is automatically blocked (green numbers under the token name),
+- specify the number of synthetic tokens or UNISWAP tokens placed in the pool, the required number of stablecoins is calculated automatically and displayed to the left of the name of the stablecoin,
+    *OR*
+- specify the number of stablecoins placed in the pool, the required number of synthetic tokens or UNISWAP tokens is calculated automatically and displayed to the left of the token name,
+- select the amount of commission,
+- specify the upper and lower limits of the price,
+- press the POOL button.
 
-Для **возврата токенов из пула ликвидности** пользователь должен выбрать в портфеле строку с NFT токеном UNISWAP, при этом автоматически заполняются следующие поля: наименования токенов, количества токенов в пуле ликвидности (красные цифры справа от "Max:"), количество токенов в кошельке (зеленые цифры под названием токенов), величина комиссии, верхняя и нижняя границы цены, количество NFT токеном UNISWAP. Далее пользователь выполняет следующие действия:
-- указать количество токенов, которое пользователь желает вернуть из пула ликвидности (но не более максимальных значений), количество противоположных токенов рассчитывается автоматически,
-- нажать кнопку UNPOOL.
+To **return tokens from the liquidity pool**, the user must select a row with the UNISWAP NFT token in the portfolio, and the following fields are automatically filled in: the names of tokens, the number of tokens in the liquidity pool (red numbers to the right of "Max:"), the number of tokens in the wallet (green numbers under the name of tokens), the amount of commission, upper and lower price limits, the number of NFT tokens UNISWAP. Next, the user performs the following actions:
+- specify the number of tokens that the user wants to return from the liquidity pool (but not more than the maximum values), the number of opposite tokens is calculated automatically,
+- press the UNPOOL button.
 
-#### Интерфейс STAKE
-Перемещение/ возврат токенов UNISX или токенов ликвидности UNISWAP на контракт UniSX.Staker.
+#### STAKE Interface
+Transfer/return of UNISX tokens or UNISWAP liquidity tokens to a UniSX.Staker contract.
 
 ![SPACsynt - contracts-STAKE-UI (1)](https://user-images.githubusercontent.com/89580052/134803939-bf8e2cb9-0845-4d7a-8371-adbf1a30eed1.jpg)
 
-На вкладке STAKE имеется три группы полей:
+There are three groups of fields on the STAKE tab:
 
-- поля левой части содержат следующую информацию: 
+- the fields on the left side contain the following information: 
 
-    = наименование токена UNISX
+    = name of the UNISX token
     
-    = количество токенов UNISX, которое пользователь желает переместить на контракт или вернуть с контракта
+    = the number of UNISX tokens that the user wants to move to the contract or return from the contract
     
-    = количество токенов UNISX в портфеле (зеленые цифры под названием токена)
+    = number of UNISX tokens in the portfolio (green numbers under the token name)
     
-    = количество токенов UNISX на контракте (красные цифры)
+    = number of UNISX tokens on the contract (red numbers)
     
-- поля правой части содержат следующую информацию:
+- the fields on the right side contain the following information:
     
-    = выпадающий список для выбора NFT токенов UNISWAP
+    = drop-down list for selecting UNISWAP NFT tokens
     
-    = количество выбранных NFT токенов UNISWAP, которое пользователь желает переместить на контракт или вернуть с контракта
+    = the number of selected UNISWAP NFT tokens that the user wants to move to the contract or return from the contract
     
-    = количество выбранных NFT токенов UNISWAP в портфеле (зеленые цифры под названием токена)
+    = the number of selected UNISWAP NFT tokens in the portfolio (green numbers under the token name)
     
-    = количество выбранных NFT токенов UNISWAP на контракте (красные цифры)
+    = number of selected UNISWAP NFT tokens on the contract (red numbers)
 
-- поля средней части содержат размер начисленного за стейкинг вознаграждения в токенах UNISX
+- the fields of the middle part contain the amount of the reward accrued for staking in UNISX tokens
 
-Для того чтобы **переместить токены UNISX** на контракт требуется 
-- указать количество токенов в левой части вкладки
-- нажать кнопку STAKE. 
+In order to **move UNISX tokens** to a contract, it is required 
+- specify the number of tokens on the left side of the tab
+- press the STAKE button. 
 
-Для того чтобы **вернуть токены UNISX** с контракта требуется 
-- указать количество токенов в левой части вкладки
-- нажать кнопку UNSTAKE. 
+In order to **return UNISX tokens** from the contract, it is required 
+- specify the number of tokens on the left side of the tab
+- press the UNSTAKE button. 
 
-Для того чтобы **переместить NFT токены UNISWAP** на контракт требуется
-- выбрать NFT токено UNISWAP из выпадающего списка в правой части вкладки
-- указать количество токенов в правой части вкладки
-- нажать кнопку STAKE. 
+In order to **move UNISWAP** NFT tokens to a contract, it is required
+- select the UNISWAP NFT token from the drop-down list on the right side of the tab
+- specify the number of tokens in the right part of the tab
+- press the STAKE button. 
 
-Для того чтобы **вернуть NFT токены UNISWAP** с контракта требуется 
-- выбрать NFT токено UNISWAP из выпадающего списка в правой части вкладки
-- указать количество токенов в правой части вкладки
-- нажать кнопку UNSTAKE. 
+In order to **return UNISWAP** NFT tokens from the contract, it is required 
+- select the UNISWAP NFT token from the drop-down list on the right side of the tab
+- specify the number of tokens in the right part of the tab
+- press the UNSTAKE button.
 
 To **receive the accrued rewards** it is required to press the CLAIM REWARD button.
 
