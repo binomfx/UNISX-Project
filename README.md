@@ -5,7 +5,7 @@ The purpose of the project is to create a service designed to issue synthetic to
 
 ## Minimally Viable Product (MVP)
 At the initial stage, it is supposed to create a minimally viable product with minimal effort and cost.
-The project is being developed on the UMI platform.
+The project is being developed on the UMA protocol.
 The task of the MVP is to check the concept and clarify the parameters of the project.
 At the MVP stage, to speed up development, it is proposed to create a synthetic token linked to the stock index of the 5 most active SPAC, see https://github.com/UMAprotocol/UMIPs/pull/399
 
