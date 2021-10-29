@@ -23,7 +23,7 @@ When developing the project, it is assumed to use the MVC-B architecture (Model,
 ## User Interface
 ### WEB interface
 It is planned to create a WEB interface that allows the user to issue a synthetic token, the price of which is tied to the price of an exchange asset, place a synthetic token in the DEX liquidity pool, and also stake project tokens within the project. For performing each of these three operations, the user receives a reward in UNISX management tokens, as well as LP-tokens of DEX liquidity pools.<br>
-The WEB interface includes the following main pages:
+The WEB interface includes the following main pages:<br>
 ![image](https://user-images.githubusercontent.com/89580052/134307104-9fa38231-6202-43a0-9429-1a80682244a8.png)
 
 **Home** – the home page contains general information or advertising information.
