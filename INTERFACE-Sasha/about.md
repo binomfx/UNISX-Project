@@ -7,6 +7,7 @@ The purpose of the UNISX project is to develop a vehicle for creating synthetic 
 - **uSPAC5** - A synthetic token that tracks the index of the 5 most active SPACs stocks can be used for speculative purposes and allows the user to earn on price movements in one of the most interesting markets without centralized intermediaries such as exchanges and brokers.
 <br>
 In the future, we plan to launch the following products:<br>
+
 - **uSPAC50** - A synthetic token that tracks the index of the 50 most active SPACs stocks allows you to react more accurately to market movements.
 - **uSPAC-FinTech** - An index that includes shares of SPACs aimed at FinTech companies.
 - **uSPAC-EV** - An index that includes shares of SPACs aimed at Electro Vehicles and related companies.
