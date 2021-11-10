@@ -1,5 +1,5 @@
 # FAQ
-## SPAC
+## What is SPAC
 Special Purpose Acquisition Companies (“SPACs”) are companies formed to raise capital in an initial public offering (“IPO”) with the purpose of using the proceeds to acquire one or more unspecified businesses or assets to be identified after the IPO (irrespective of form, a “Business Combination”). 
 SPACs have only a limited period during which they may consummate a Business Combination, generally not exceeding 24 months. 
 A SPAC generally focuses upon one industry or sector, but may maintain flexibility to engage in transactions in other industries or sectors if necessary or appropriate.<br>
@@ -92,6 +92,47 @@ To **return tokens from the liquidity pool**, the user must select a row with th
 - press the UNPOOL button.
 
 ## How to stake/unstake
+There are three groups of fields on the STAKE tab:
+
+- the fields on the left side contain the following information: 
+
+    = name of the UNISX token
+    
+    = the number of UNISX tokens that the user wants to move to the contract or return from the contract
+    
+    = number of UNISX tokens in the portfolio (green numbers under the token name)
+    
+    = number of UNISX tokens on the contract (red numbers)
+    
+- the fields on the right side contain the following information:
+    
+    = drop-down list for selecting UNISWAP NFT tokens
+    
+    = the number of selected UNISWAP NFT tokens that the user wants to move to the contract or return from the contract
+    
+    = the number of selected UNISWAP NFT tokens in the portfolio (green numbers under the token name)
+    
+    = number of selected UNISWAP NFT tokens on the contract (red numbers)
+
+- the fields of the middle part contain the amount of the reward accrued for staking in UNISX tokens
+
+In order to **move UNISX tokens** to a contract, it is required 
+- specify the number of tokens on the left side of the tab
+- press the STAKE button. 
+
+In order to **return UNISX tokens** from the contract, it is required 
+- specify the number of tokens on the left side of the tab
+- press the UNSTAKE button. 
+
+In order to **move UNISWAP** NFT tokens to a contract, it is required
+- select the UNISWAP NFT token from the drop-down list on the right side of the tab
+- specify the number of tokens in the right part of the tab
+- press the STAKE button. 
+
+In order to **return UNISWAP** NFT tokens from the contract, it is required 
+- select the UNISWAP NFT token from the drop-down list on the right side of the tab
+- specify the number of tokens in the right part of the tab
+- press the UNSTAKE button.
 
 ## How to get rewards
 To **receive the accrued rewards** it is required to press the CLAIM REWARD button.
