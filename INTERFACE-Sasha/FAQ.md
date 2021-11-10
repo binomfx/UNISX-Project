@@ -78,6 +78,18 @@ To **withdraw** excess collateral of already issued tokens, the user must perfor
 - press the WITHDRAW button.
 
 ## How to pool/unpool
+To **place the project tokens in the liquidity pool**, the user must select a row of synthetic token or UNISX token in the portfolio table, while the field with the name of the synthetic token or UNISX is automatically filled in on the tab, as well as the number of corresponding tokens in the potfel (green numbers under the name of the token). Next, the user performs the following actions:
+- select a stablecoin from the drop-down menu, and the number of corresponding tokens in the potfel is automatically blocked (green numbers under the token name),
+- specify the number of synthetic tokens or UNISWAP tokens placed in the pool, the required number of stablecoins is calculated automatically and displayed to the left of the name of the stablecoin,
+    *OR*
+- specify the number of stablecoins placed in the pool, the required number of synthetic tokens or UNISWAP tokens is calculated automatically and displayed to the left of the token name,
+- select the amount of commission,
+- specify the upper and lower limits of the price,
+- press the POOL button.
+
+To **return tokens from the liquidity pool**, the user must select a row with the UNISWAP NFT token in the portfolio, and the following fields are automatically filled in: the names of tokens, the number of tokens in the liquidity pool (red numbers to the right of "Max:"), the number of tokens in the wallet (green numbers under the name of tokens), the amount of commission, upper and lower price limits, the number of NFT tokens UNISWAP. Next, the user performs the following actions:
+- specify the number of tokens that the user wants to return from the liquidity pool (but not more than the maximum values), the number of opposite tokens is calculated automatically,
+- press the UNPOOL button.
 
 ## How to stake/unstake
 
