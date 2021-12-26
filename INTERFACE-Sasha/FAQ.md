@@ -21,7 +21,17 @@ By their nature, SPAC shares are subject to impulsive growth at the moment of in
 `A good way to capitalize on such momentum growth without having to analyze hundreds of SPACs is to take advantage of the movement of the index value that includes stocks of the most active SPACs.`<br>
 The price of our synthetic tokens is tied to the value of the SPAC stock index.
 
-## Governance token UNISX
+## Reward token UNISX
+Users who produce synthetics (installers) receive a reward in UNISX project tokens, depending on the volume of blocked security tokens and the time that the user holds an open position.
+In addition, users have the opportunity to block the UNISX tokens and LP tokens belonging to them for staking contract. For this, users receive an additional reward in UNISX tokens.
+The UNISX tokens can be placed in the DEX liquidity pool or sold through DEX.
+
+## Utility token xUNISX
+For each UNISX token that the user blocks on the staking contract, the user receives a utility-token xUNISX.
+xUNISX can be used for:
+- return of the UNISX token from the staking
+- voting on the management of the service
+- receiving DEX cashback commissions when performing transactions for the purchase and sale of synthetic tokens
 
 ## How to mint/burn synt
 The user selects the instrument row in the instrument table or in the portfolio table (if the user has already issued such tokens), the tab is automatically filled in:
@@ -48,13 +58,6 @@ The user selects the instrument row in the instrument table or in the portfolio 
 
    = Liquidation Price - shows at what price value the liquidation risk appears.
 
-- fields of the middle part:
-
-   = widget of the instrument quotes chart,
-
-   = description of the tool,
-
-   = accrued rewards.
 
 To **mint** a synthetic token, the user must perform the following actions:
 - enter the number of collateral tokens that the user is ready to use for the issue of synthetic tokens, the number of synthetics produced is filled in automatically taking into account the collateral requirement
